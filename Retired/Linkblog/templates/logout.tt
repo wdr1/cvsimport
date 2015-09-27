@@ -1,0 +1,6 @@
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+You are now logged out.
+
+[% INCLUDE footer.tt %]

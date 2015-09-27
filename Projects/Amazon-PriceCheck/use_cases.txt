@@ -1,0 +1,9 @@
+* Price Changes
+  - 1/1: User A buys Foo @ 10.00
+  - 1/5: Foo goes to $5.00
+  - 1/6: Foo goes to $7.00
+  - 1/10: User B buys Foo at $7
+  - 1/11: Foo goes to $6
+  - Expected: Notify B, but not A
+
+* Buy something every 6 months

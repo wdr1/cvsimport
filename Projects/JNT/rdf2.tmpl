@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+
+<channel>
+<title>Calvin and Hobbes (Unofficial)</title>
+<link>http://www.ucomics.com/calvinandhobbes/</link>
+<description>Unofficial Calvin and Hobbes RSS Feed</description>
+</channel>
+
+<image>
+<title>Calvin and Hobbes</title>
+<url>http://wdr1.com/img/rss_cnh_icon.jpg</url>
+<link>http://www.ucomics.com/calvinandhobbes/</link>
+<width>141</width>
+<height>106</height>
+</image>
+
+[% FOREACH i = items %]
+<item>
+<title>[% i.title %]</title>
+<link>[% i.link %]</link>
+<guid isPermaLink="false">[% i.img %]</guid>
+<description>
+&lt;img src="[% i.img %]" border="0" /&gt;
+[% i.external_link %]
+</description>
+</item>
+[% END %]
+
+
+</rdf:RDF>

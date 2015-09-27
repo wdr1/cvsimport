@@ -1,0 +1,66 @@
+[% USE date %]
+[% USE String %]
+[% title = user _ "'s Linkblog" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+
+<TABLE WIDTH="100%" BORDER=0><TR>
+  <TD WIDTH="99%"></TD>
+  [% IF public %]
+  <TD ALIGN="RIGHT">
+  [&nbsp;<A HREF="http://linkblog.org/?a=edit">Edit</A>&nbsp;]&nbsp;&nbsp;
+  </TD>  
+ [% END %]
+  <TD ALIGN="RIGHT">
+  <A HREF="http://linkblog.org/?a=rss&u=[% user %]"><IMG SRC="/img/xml.gif" BORDER=0></A>
+  </TD>
+</TR></TABLE>
+
+
+[% IF links.size == 0 %]
+<H1>Hey!  You gotta add some links!</H1>
+<I>(Be sure to <A HREF="/?a=show_download">install</A> (and restart your browser) so you can get started.)</I>
+[% END %]
+
+[% ldate = "" %]
+<UL>
+[% FOREACH l IN links %]
+  [% title = l.lk_title ? l.lk_title : l.lk_url %]
+  [% ref = trim_url(  l.lk_referrer ) %]
+  [% cdate = date.format( l.lk_crt_ts, '%m/%d/%Y' ) %]
+
+[% IF ldate != cdate %]
+  [% ldate = cdate %]
+</UL>
+<B><FONT SIZE="+2"> [% cdate %] </FONT></B><HR>
+<UL>
+[% END %]
+
+<LI> <A HREF="[% l.lk_url %]">[% title %]</A>
+[% IF l.lk_description %]
+- [% l.lk_description %]
+[% END %]
+<BR>
+
+<FONT COLOR="#727979" SIZE="-1"><I>Found at [% date.format( l.lk_crt_ts ) %]
+[% IF l.lk_referrer %]
+via <A HREF="[% l.lk_referrer %]">[% ref %]</A>
+[% END %] 
+</I></FONT>
+
+[% END %]
+</UL>
+
+<TABLE><TR><TD>
+<IMG SRC="/img/pixel.gif" WIDTH="400" HEIGHT="0">
+</TD></TR></TABLE>
+
+  [% IF public %]
+<I>You linkblog is public & viewable at <A HREF="http://linkblog.org/users/[% user %]">http://linkblog.org/users/[% user %]</A></I>
+  [% END %]
+<BR>
+
+<IMG SRC="/img/pixel.gif" HEIGHT="50" WIDTH="0">
+
+[% INCLUDE footer.tt %]

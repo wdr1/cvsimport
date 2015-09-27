@@ -1,0 +1,46 @@
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+
+<H2>Welcome to Linkblog!</H2>
+To create an account, please enter your email & a password below.
+  
+<UL>
+[% FOREACH e = errors %]
+<LI> <FONT COLOR="RED">[% e %]</FONT>
+[% END %]
+</UL>
+
+<FORM METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="a" VALUE="create_user">
+<TABLE>
+
+<TR><TD><B>Username</B></TD><TD></TD></TR>
+<TR>
+<TD COLSPAN=2>
+<INPUT SIZE=30 TYPE="text" NAME="log_username" VALUE="[% log_username %]">
+</TD>
+</TR>
+
+<TR><TD><B>Email</B></TD><TD><I>Confirm</I></TR>
+<TR>
+<TD> <INPUT SIZE=30 TYPE="text" NAME="email" VALUE="[% email %]"> </TD>
+<TD> <INPUT SIZE=30 TYPE="text" NAME="email2" VALUE="[% email2 %]"> </TD>
+</TR>
+
+<TR><TD><B>Password</B></TD><TD><I>Confirm</I></TR>
+
+<TR>
+<TD> <INPUT SIZE="30" TYPE="PASSWORD" NAME="log_password"> </TD>
+<TD> <INPUT SIZE="30" TYPE="PASSWORD" NAME="log_password2"> </TD>
+</TR>
+<TR><TD><IMG SRC="/img/pixel.gif" HEIGHT="10" WIDTH="1"></TD></TR>
+
+<TR><TD COLSPAN=2 ALIGN="RIGHT">
+<INPUT TYPE="SUBMIT" VALUE="Create">
+</TD></TR>
+
+</TABLE>
+</FORM>
+
+[% INCLUDE footer.tt %]

@@ -1,0 +1,16 @@
+<TR >
+<TD VALIGN="TOP" WIDTH="1" BGCOLOR="#80FFCF">
+<TABLE><TR><TD>
+[% IF NOT nonav %]
+<A HREF="http://linkblog.org/linkblog.pl?a=welcome">Home</A><BR>
+<A HREF="http://my.linkblog.org/">My Linkblog</A><BR>
+<A HREF="http://linkblog.org/linkblog.pl?a=show_download">Download</A><BR>
+<A HREF="http://linkblog.org/linkblog.pl?a=show_create">Create an Account</A><BR>
+<A HREF="http://linkblog.org/linkblog.pl?a=prefs">Preferences</A><BR>
+<!-- <A HREF="http://linkblog.org/linkblog.pl?a=contact">Contact</A><BR> -->
+<A HREF="http://linkblog.org/linkblog.pl?a=logout">Logout</A><BR>
+<IMG SRC="/img/pixel.gif" HEIGHT=0 WIDTH="120">
+[% END %]
+</TD></TR></TABLE>
+</TD><TD VALIGN="TOP">
+

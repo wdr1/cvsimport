@@ -1,0 +1,4 @@
+<HTML>
+<HEAD><TITLE>[% g.sitename %]: [% p.title or ""%]</TITLE></HEAD>
+<BODY BGCOLOR="[% p.bgcolor or "WHITE" %]">
+

@@ -1,0 +1,13 @@
+To: [% user.email %]
+From: wdr1@pobox.com
+Subject: Your Amazon Products Are Now Being Watched!
+
+... something about your products are now loaded ...
+
+To see or change your results:
+
+[% url.base %][% url.guid_list %]/[% user.guid %]
+
+... something else ... 
+
+

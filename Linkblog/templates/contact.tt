@@ -1,0 +1,9 @@
+[% title = "My Linkblog" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+Suggestions?  Questions?  Comments?  We'd love to hear what you got to say!
+<P>
+Go on and drop us a line at <A HREF="mailto:linkblog@linkblog.org">linkblog@linkblog.org</A>!
+
+
+[% INCLUDE footer.tt %]

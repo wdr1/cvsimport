@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Wikified Beastie</title> 
+  <link rel="stylesheet" type="text/css" href="main.css">   
+</head>
+<body>
+<div class="title_header">
+  <div class="title_header_1">Wikified Beastie</div>
+  <div class="title_header_2">Examining Hip-Hop through Wikipedia & Perl</div>
+</div>
+<br>
+      
+<div id="mainl">
+  [% FOREACH a = artist.keys.sort %]
+  <div class="left_nav">
+    <h4 class="mar">[% a %]</h4>
+  </div>
+  <UL id="navlist">
+    [% FOREACH album = artist.$a.album.keys.sort('year') %]
+    <LI> <A HREF="#[% string_to_anchor( a, album ) %]">[% album %]</A>
+    [% END %]
+  </UL>
+  [% END %]
+    <div class="left_nav">
+      <h4 class="mar">About</h4>
+    </div>
+    <UL id="navlist">
+      <LI> Why
+      <LI> FAQ
+      <LI> Source
+      <LI> Bitch
+    </UL>
+  </div>
+
+  <div id="mainr">
+    <h1>Album One</h1> 
+    <h4>Song One</h4>
+  </div>
+</div>		  
+
+</body>
+</html>

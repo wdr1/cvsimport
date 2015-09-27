@@ -1,0 +1,19 @@
+[% title = "Welcome to Linkblog!" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+Welcome to Linkblog!
+<P>
+Feel free to <A HREF="http://linkblog.org/linkblog.pl?a=show_download">install</A> it in your browser, <A HREF="http://linkblog.org/linkblog.pl?a=show_create">create an account</A>, or browse <A HREF="http://linkblog.org/users/wdr1">someone else's linkblog</A>.
+
+<P>
+<TABLE>
+  <TR>
+    <TD WIDTH="50%"><B>Recent Links</B></TD>    
+  </TR>
+  <TR>
+   <TD VALIGN="TOP">[% INCLUDE "recent_links.html" %]</TD>
+  </TR>
+
+[% INCLUDE footer.tt %]
+

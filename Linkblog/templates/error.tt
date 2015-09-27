@@ -1,0 +1,8 @@
+[% title = "Error!" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+[% error %]
+
+[% INCLUDE footer.tt %]
+

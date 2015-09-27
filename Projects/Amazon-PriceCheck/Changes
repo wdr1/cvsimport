@@ -1,0 +1,6 @@
+Revision history for Perl extension Amazon::PriceCheck.
+
+0.01  Wed Aug 27 01:32:35 2008
+	- original version; created by h2xs 1.23 with options
+		-XA Amazon::PriceCheck
+

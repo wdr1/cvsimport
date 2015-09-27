@@ -1,0 +1,32 @@
+<SCRIPT LANGUAGE="JavaScript">
+  /* $Id: linkblog.html,v 1.1.1.1 2010/08/14 04:57:50 wdr1 Exp $ */
+  var parentwin = external.menuArguments; 
+  var doc = parentwin.document;
+
+  var link, ref, title;
+  if(parentwin.event.srcElement.tagName =="A") {
+    link = parentwin.event.srcElement;
+    ref = doc.URL;
+    title = "";
+  } else {
+    link = doc.URL; 
+    ref = doc.referrer;
+    title = doc.title;
+  }
+
+  link  = escape(link);
+  ref   = escape(ref);
+  title = escape(title);  
+
+  lb = window.open("http://linkblog.org/index.cgi?" + 
+  "nonav=1" + 
+  "&a=" + "sal" +
+  "&l=" + link +
+  "&r=" + ref +
+  "&t=" + title +
+         "",
+         "__linkblog_add",
+        'toolbar=0,statusbar= 0,location=1,menubar=0,resizable=1,width=400,height=200,left = 100,top = 100' ); 
+
+</SCRIPT>
+

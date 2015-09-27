@@ -1,0 +1,41 @@
+Process Email Queue
+==============================================================================
+x pull email
+x extract data
+  - email
+  - checksum of email
+  - list of products (title, category, cost)
+
+x does the customer exist?
+  yes: 
+    - get id
+  no: 
+    - insert data -- replace(uuid(), '-', '')
+    - return id
+
+* if not, then foreach product
+  - check for existing entry in product table by title & price
+  - check db for match to get asin only
+  - if not in db, look up amzn for asin
+    * if i have cateogry, use title search w/ category
+    * if no category
+      
+  - set expiration to now + 40 days
+
+* send confirmation email
+
+
+TODO
+==============================================================================
+o Don't load dupes if processing the same email
+o instrument tracing universally
+
+Site:
+o GUID show products
+o Create a password
+o login
+o delete an item
+o add an item
+o change expiration date
+o show amount saved (per user)
+o show amount saved (globally)

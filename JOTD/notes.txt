@@ -1,0 +1,15 @@
+setuid: wdr1, Look at the existing XML dumps from the various
+Wikimedia projects, and model those
+[10:12pm] setuid: Then use mwdumper to import
+
+php ~/public_html/jargon/maintenance/importDump.php plato.xml 
+
+== MySQL Setup ==
+
+DB: wdr1_jargon
+User: wdr1_jargon
+
+== Features ==
+* What's new this month
+* Most actively edited
+* Most actively viewed

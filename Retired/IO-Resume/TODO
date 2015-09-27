@@ -1,0 +1,33 @@
+$Id: TODO,v 1.1.1.1 2010/08/14 04:57:50 wdr1 Exp $
+
+TODO
+==============================================================================
+x run a batch job
+x recover using start_row
+x recover after stopped job
+x force recover at start after stopped job
+x --rows=10 (only row 10)
+x --rows=3,11 (rows 3 & 11)
+x --rows=8:34 (rows 8 - 34)
+x --rows=3,11,56:90 (rows 3, 11, and 56 - 90)
+x skip certain rows
+* retry bad transactions
+* lock file ever x transactions
+* --help
+* --version
+* documentation
+* CLI options
+* output to STDOUT
+* email notify when complete
+
+Think About
+==============================================================================
+* --fast
+* --throttle  -- slow down between requests
+* retry mechanism
+
+Not Now
+==============================================================================
+* Multiple file support
+* Revist move_to_starting_position logic
+

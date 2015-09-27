@@ -1,0 +1,6 @@
+Revision history for Perl extension Mgrep.
+
+0.01  Tue Aug 23 22:58:51 2005
+	- original version; created by h2xs 1.23 with options
+		-XA Mgrep -b 5.6.1
+

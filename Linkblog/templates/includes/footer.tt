@@ -1,0 +1,16 @@
+</TD></TR>
+<TR><TD COLSPAN="2" ALIGN="center">
+
+[% IF NOT nonav %]
+<P>
+<HR WIDTH="25%">
+<P>
+<FONT SIZE="-1"><I>
+Questions?  Comments?  Suggestions?  Drop us a line at <A HREF="mailto:bill@linkblog.org">bill@linkblog.org</A>.
+</I></FONT>
+[% END %]
+
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

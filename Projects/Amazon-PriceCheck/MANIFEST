@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Amazon-PriceCheck.t
+lib/Amazon/PriceCheck.pm

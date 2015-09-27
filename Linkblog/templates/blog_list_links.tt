@@ -1,0 +1,10 @@
+<UL>
+[% counter = 0 %]
+[% FOREACH l = links %]
+  [% counter = counter + 1 %]
+  [% url = l.lk_url %]
+  [% title = l.lk_title ? l.lk_title : l.lk_url %]
+  <LI> <A HREF="[% url %]">[% title %]</A>
+  [% LAST IF counter >= max_count %]
+[% END %]
+</UL>

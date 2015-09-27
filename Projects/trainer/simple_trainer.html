@@ -1,0 +1,201 @@
+<HTML><HEAD><TITLE>Sandbox</TITLE>
+<SCRIPT src="prototype.js"></SCRIPT>
+
+<style type="text/css">
+div.clicked {
+  margin: 2px;
+  color: red;
+  font-size: 16pt;
+}
+div.cIsAnswerCorrect {
+  margin: 2px;
+  font-size: 16pt;
+}
+td.cStatusGrid0 {
+  background-color: green;
+  vertical-align: middle;
+}
+td.cStatusGrid1 {
+  background-color: blue;
+  vertical-align: middle;
+}
+td.cStatusGrid2 {
+  background-color: yellow;
+  vertical-align: middle;
+}
+td.cStatusGrid3 {
+  background-color: orange;
+  vertical-align: middle;
+}
+td.cStatusGrid4 {
+  background-color: red;
+  vertical-align: middle;
+}
+</style>
+</HEAD>
+<BODY>
+<SCRIPT type="text/javascript">
+var base_url = '/trainer/simple_player.cgi';
+var local_shoe_size = 8;
+
+var blackjack_response;
+var activeShoe;
+var bufferShoe;
+var cardImages;
+var round;
+
+function init() {
+  alert( $F('email') );
+}
+
+
+function seedLocalShoe() {
+    var url = base_url + "?s=" + local_shoe_size * 2 + "&a=d&e=" + $F('email');
+    new Ajax.Request( url, {
+        method: 'get',
+        onSuccess: function(transport) {
+            blackjack_response = transport.responseText.evalJSON();
+            var split_point = Math.round( blackjack_response.size()/2 - .5 );
+            activeShoe = blackjack_response.slice(0, split_point);
+            bufferShoe = blackjack_response.slice(split_point);
+            playerLoaded();
+        },
+        onFailure: function() { alert('Ajax request failed!') }
+    });
+    
+}
+
+
+function playerLoaded() {
+    $('loginButton').disable();
+    $('email').disable();
+    
+    dealHand();
+
+    var responseButtons = [ 'bPlayerRepsonseHit', 'bPlayerRepsonseStand', 'bPlayerRepsonseDouble',
+        'bPlayerRepsonseSplit'];
+    responseButtons.each( function(i) {
+        $( i ).enable();
+    });
+}
+
+
+function displayRound(round) {
+    var cards = [
+        [ 'dealerCard',  'd' ],
+        [ 'playerCard1', 'p1' ],
+        [ 'playerCard2', 'p2' ]
+    ];
+
+    cards.each( function(i) {
+        var id = i[0];
+        var card_type = i[1];
+
+        var maxN = cardImages[ round.hand[ card_type ] ].size() - 1;
+        var randN = Math.ceil( Math.random() * maxN );
+
+        $( id ).src = cardImages[ round.hand[ card_type ] ][ randN ];
+    } );
+}
+
+
+function dealHand() {
+    if ( activeShoe.length == 0 ) {
+        alert( "I'm empty.  Ya got me." );
+    }
+    
+    round = activeShoe.shift();
+    displayRound( round );
+    
+    if ( activeShoe.length == 0 ) {
+        activeShoe = bufferShoe;
+        var url = base_url + "?s=" + local_shoe_size + "&a=d&e=" + $F('email');
+        new Ajax.Request( url, {
+            method:'get',
+            onSuccess: function(transport){
+                bufferShoe = transport.responseText.evalJSON();
+            }
+        });
+    }
+}
+
+
+function loadCardImages() {
+    var url = base_url + "?&a=get_deck_images&e=dummy@example.com";
+    new Ajax.Request( url, {
+        method:'get',
+        onSuccess: function(transport){
+            cardImages = transport.responseText.evalJSON();
+        }
+    });
+  
+}
+
+
+function refreshStatus() {
+    var url = base_url + "?a=status&e=" + $F('email');
+    new Ajax.Updater( 'iStatusGrid', url, {
+        method: 'get'
+    });
+}
+
+
+function playerResponse( response ) {
+    var answer = round.a;
+
+    var hand = round.hand.d + "-" + round.hand.p1 + "-" + round.hand.p2;
+    
+    var answerCorrect;
+    if (answer == response) {
+        answerCorrect = 1;
+        $('iIsAnswerCorrect').style.backgroundColor = "green";
+        $('iIsAnswerCorrect').update("Correct");
+    } else {
+        answerCorrect = 0;
+        $('iIsAnswerCorrect').style.backgroundColor = "red";
+        $('iIsAnswerCorrect').update("Wrong");
+    } 
+
+    var url = base_url + "?a=r&e=" + $F('email') + "&hand=" + hand +
+        "&response=" + answerCorrect;
+    
+    new Ajax.Request( url, {
+        method: 'get',
+        onFailure: function() { alert('playerResponse failed!') }
+    });
+
+    dealHand();
+}
+
+loadCardImages();
+
+</SCRIPT>
+
+<P class="cHeader">Fakey Login</P>
+<P class="cEmail">Email:</B> <INPUT TYPE=TEXT NAME="e" ID="email" WIDTH=30>
+<INPUT TYPE=BUTTON OnClick='seedLocalShoe();' ID="loginButton" VALUE="Login">
+<HR>
+<B>Last Answer:</B> <div class='cIsAnswerCorrect' ID='iIsAnswerCorrect'>--</div>
+<HR>
+<TABLE><TR><TD>
+<P> <div class='cDealerLabel'>Dealer:</div><div class='cDealerValue' id='dealerCardNOT'> <IMG ID="dealerCard" SRC="http://wdr1.com/trainer/deckimages/plain/facedown.png"> </div></P> 
+</TD><TD ALIGN=RIGHT>
+<P> <div class='cPlayerLabel'>First Player Card:</div> <div class='cPlayerValue' id='playerCard1NOT'> <IMG ID="playerCard1" SRC="http://wdr1.com/trainer/deckimages/plain/facedown.png"> </div></P> 
+</TD><TD>
+<P> <div class='cPlayerLabel'>Second Player Card:</div> <div class='cPlayerValue' id='playerCard2NOT'> <IMG ID="playerCard2" SRC="http://wdr1.com/trainer/deckimages/plain/facedown.png"> </div></P>
+</TD></TR>
+<TR>
+  <TD COLSPAN=4>
+    <INPUT TYPE=BUTTON ONCLICK="playerResponse('H')" ID="bPlayerRepsonseHit" VALUE="Hit" DISABLED=1>
+    <INPUT TYPE=BUTTON ONCLICK="playerResponse('S')" ID="bPlayerRepsonseStand" VALUE="Hold" DISABLED=1>
+    <INPUT TYPE=BUTTON ONCLICK="playerResponse('D')" ID="bPlayerRepsonseDouble" VALUE="Double" DISABLED=1>
+    <INPUT TYPE=BUTTON ONCLICK="playerResponse('P')" ID="bPlayerRepsonseSplit" VALUE="Split" DISABLED=1>
+  </TD>
+</TABLE>
+<HR>
+<INPUT TYPE=BUTTON ONCLICK="refreshStatus()" VALUE="Refresh Status">
+<div ID='iStatusGrid'></div> 
+<P />
+
+</BODY>
+</HTML>

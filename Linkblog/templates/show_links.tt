@@ -1,0 +1,43 @@
+[% USE date %]
+[% USE String %]
+[% title = user _ "'s Linkblog" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+<TABLE WIDTH='100%' zBORDER=1>
+<TR>
+  <TD>
+  [% IF public %]
+Friends can view your linkblog at http://linkblog.org/users/[% user %]
+  [% END %]
+  </TD>
+  <TD ALIGN="RIGHT">
+  <B>[% user %]</B>'s links
+  </TD>
+</TR></TABLE>
+
+[% FOREACH l IN links %]
+<TABLE WIDTH="100%" BORDER="1"><TR><TD>
+<TABLE WIDTH="100%" zBORDER="1"><TR><TD>
+  [% u = l.lk_title ? l.lk_title : l.lk_url %]
+   <A HREF="[% l.lk_url %]">[% u %]</A>
+<BR>
+
+[% l.lk_description %]
+</TD></TR><TR><TD ALIGN="RIGHT">
+<FONT SIZE="-1"><I>Found at <U>[% date.format( l.lk_crt_ts ) %]</U>
+[% IF l.lk_referrer %]
+[% ref = trim_url(  l.lk_referrer ) %]
+on <A HREF="[% l.lk_referrer %]">[% ref %]</A></I></FONT>
+[% END %] 
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><zHR WIDTH="25%"></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+[% END %]
+<TABLE><TR><TD>
+<IMG SRC="/img/pixel.gif" WIDTH="500" HEIGHT="0">
+</TD></TR></TABLE>
+
+[% INCLUDE footer.tt %]

@@ -1,0 +1,29 @@
+* RSS feeds
+* Screen shots/general presentation
+
+* Slurp other accounts
+
+* Comments
+
+* Email your password
+* Account administration
+
+
+Long-term:
+--------------------------------------------------
+* Resolve Redirects (e.g., tinyurl)
+* Email on new entries
+
+* Consolidated feeds
+* Most popular
+* Track links clicked thru
+* themes/skins
+* Cronjob to purge old session entries
+* Cronjob to purge DB?
+
+  
+
+Not Sure Options:
+--------------------------------------------------
+- Link title auto from destination
+- Link title auto from linked text

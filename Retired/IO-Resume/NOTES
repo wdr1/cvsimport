@@ -1,0 +1,24 @@
+* Explict user overrides default
+  - user stating a start overrides a recovery
+* Output
+  - appended when recovering, user-interaction results in a new file?
+
+==================== Use Cases ====================
+
+"Bad" line
+------------------------------------------------------------------------------
+- Job stops with error on row X
+- User run ad-hoc with just X
+- User either
+  - refines function/data so that X is now okay
+    - final output should have everything before & after run
+  - indicates to skip X
+    - final output should have everything before & after run, minus X
+
+Problems w/ Batch Jobs
+- Terminate in the middle
+  * ideally continue processing the rest and let us come back to the bad ones, or at the very least restart there
+- status, eta of completion
+- Re-try flaky services
+- stop & restart
+- retry just a particular case

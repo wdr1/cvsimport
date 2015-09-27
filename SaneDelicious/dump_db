@@ -1,0 +1,16 @@
+#!/usr/bin/python
+# -*- python -*- 
+
+import anydbm
+import sys
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+
+def main():
+    file = sys.argv[1]
+    db = anydbm.open(file, "c")
+    for k in db.keys():
+        print k, '-', db[k]
+
+if __name__ == "__main__":
+    main()

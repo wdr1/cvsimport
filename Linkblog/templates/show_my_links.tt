@@ -1,0 +1,39 @@
+[% USE date %]
+[% USE String %]
+[% title = user _ "'s Linkblog" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+[% FOREACH l IN links %]
+<TABLE WIDTH="100%" BORDER="1"><TR><TD>
+<TABLE WIDTH="100%" zBORDER="1"><TR><TD>
+  [% u = l.lk_title ? l.lk_title : l.lk_url %]
+ <A HREF="/linkblog.pl?a=delete_link&i=[% l.lk_id %]"><IMG SRC="/img/stop.png" BORDER=0 ALIGN="RIGHT"></A>
+   <A HREF="[% l.lk_url %]">[% u %]</A>
+<BR>
+
+[% l.lk_description %]
+</TD></TR><TR><TD ALIGN="RIGHT">
+<FONT COLOR="#727979" SIZE="-1"><I>Found at <U>[% date.format( l.lk_crt_ts ) %]</U>
+[% IF l.lk_referrer %]
+[% ref = trim_url(  l.lk_referrer ) %]
+via <A HREF="[% l.lk_referrer %]">[% ref %]</A></I></FONT>
+[% END %] 
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><zHR WIDTH="25%"></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+[% END %]
+<TABLE><TR><TD>
+<IMG SRC="/img/pixel.gif" WIDTH="400" HEIGHT="0">
+</TD></TR></TABLE>
+
+  [% IF public %]
+<I>You linkblog is public & viewable at <A HREF="http://linkblog.org/users/[% user %]">http://linkblog.org/users/[% user %]</A></I>
+  [% END %]
+<BR>
+
+<IMG SRC="/img/pixel.gif" HEIGHT="50" WIDTH="0">
+
+[% INCLUDE footer.tt %]

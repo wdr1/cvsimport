@@ -1,0 +1,42 @@
+Iterator::File
+  * public api
+  * instantiates correct I::File class
+  * instantiates correct I::State class
+  * "drives" the process
+
+  - next()
+  - value()
+  - advance_to( $spot )
+  - finish()
+  - _initialize()
+
+Iterator::Config
+
+
+Iterator::File::Source::Interface
+
+Iterator::File::Source::FlatFile
+  - Loop based on $\
+
+Iterator::File::Source::CSV
+
+
+
+Iterator::File::State::Interface  
+  - initialize();
+  - advance_marker();
+  - marker()
+  - set_marker( $number )
+  - clean_up()
+
+Iterator::File::State::TempFile
+
+Iterator::File::State::SharedMemory
+
+==============================================================================
+== TODO
+==============================================================================
+o write documentation
+
+x progress indication
+x operator overload

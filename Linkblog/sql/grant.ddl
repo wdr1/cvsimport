@@ -1,0 +1,1 @@
+GRANT ALL PRIVILEGES ON linkblog.* TO linkblog@localhost WITH GRANT OPTION;

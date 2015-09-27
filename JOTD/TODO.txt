@@ -1,0 +1,22 @@
+o Data Model
+o upload files to directory/servable via web
+o User subscribe
+o User unsubscribe
+o Select pseudo-random entry
+o Transform HTML to email format
+o Generate RSS Feed
+o Generate preview email to me (1 day in advance)
+o Generate email to users
+
+o Track bounces
+
+o Register hacker-jargon.com
+o Blog Entry
+o Google AdWords
+
+o Popularity index (what entries get visited the most)
+
+
+Down the Road
+==============================================================================
+o Jargon Wiki

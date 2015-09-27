@@ -1,0 +1,20 @@
+[% title = "" %]
+<!-- Boilerplate_Top_Begin -->
+<TABLE>
+<TR><TD COLSPAN="2">
+[% INCLUDE header.tt %]
+</TD></TR>
+<TR><TD WIDTH="50">
+[% INCLUDE spine.tt %]
+</TD><TD VALIGN="TOP">
+<!-- Boilerplate_Top_End -->
+
+
+
+<!-- Boilerplate_Bottom_Begin -->
+</TD></TR>
+<TR><TD COLSPAN="2">
+[% INCLUDE footer.tt %]
+</TD></TR>
+</TABLE>
+<!-- Boilerplate_Bottom_End -->

@@ -1,0 +1,7 @@
+[% title = "Welcome to Linkblog!" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+
+[% INCLUDE footer.tt %]
+

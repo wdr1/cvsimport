@@ -1,0 +1,11 @@
+[% INCLUDE header.tt %]
+
+[% INCLUDE left_nav.tt %]
+
+  <div id="mainr">
+    <h1>Album One</h1> 
+    <h4>Song One</h4>
+  </div>
+
+[% INCLUDE footer.tt %]
+

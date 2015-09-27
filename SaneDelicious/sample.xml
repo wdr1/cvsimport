@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/">
+  <channel rdf:about="http://feeds.delicious.com">
+    <title>Delicious popular</title>
+    <link>http://delicious.com/popular</link>
+    <description>the latest popular bookmarks</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://sixrevisions.com/design-showcase-inspiration/50-beautiful-clean-and-simple-web-designs/"/>
+        <rdf:li rdf:resource="http://weblist.me/"/>
+        <rdf:li rdf:resource="http://thumboo.com/"/>
+        <rdf:li rdf:resource="http://www.bestcollegesonline.net/blog/2010/253/"/>
+        <rdf:li rdf:resource="http://www.accreditedonlinecolleges.com/blog/2009/100-great-google-docs-tips-for-students-educators/"/>
+        <rdf:li rdf:resource="http://woorkup.com/2010/02/14/5-fresh-and-extreme-useful-fonts-for-logos/"/>
+        <rdf:li rdf:resource="http://coliss.com/articles/build-websites/architectonics/usability/the-definitive-guide-of-styling-web-links.html"/>
+        <rdf:li rdf:resource="http://www.ttcbn.net/no_second_life/2010/02/plus-pk-513lscansnap-s1500mdropboxgoodreaderiphone-mac-net-iphone-shopping.html"/>
+        <rdf:li rdf:resource="http://blog.excite.co.jp/aikouemura/10772280/"/>
+        <rdf:li rdf:resource="http://mashable.com/2010/02/14/google-buzz-column"/>
+        <rdf:li rdf:resource="http://www.copyblogger.com/how-crappy-landing-pages-kill-email-campaigns/"/>
+        <rdf:li rdf:resource="http://blog.goo.ne.jp/mit_sloan/e/a1d0d692eb3f8b2759829b6f04a14232"/>
+        <rdf:li rdf:resource="http://www.themillions.com/2009/02/diagramming-obama-sentence_16.html"/>
+        <rdf:li rdf:resource="http://telekast.sourceforge.net/"/>
+        <rdf:li rdf:resource="http://www.vanseodesign.com/web-design/color-theory/"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://sixrevisions.com/design-showcase-inspiration/50-beautiful-clean-and-simple-web-designs/">
+    <title>50 Beautiful Clean and Simple Web Designs</title>
+    <dc:date>2010-02-15T00:26:29Z</dc:date>
+    <link>http://sixrevisions.com/design-showcase-inspiration/50-beautiful-clean-and-simple-web-designs/</link>
+    <dc:creator>randux</dc:creator>
+    <dc:subject>inspiration webdesign design web minimal showcase examples clean creative gallery</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/inspiration"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/webdesign"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/design"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/web"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/minimal"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/showcase"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/examples"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/clean"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/creative"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/gallery"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://weblist.me/">
+    <title>WebList - The Place To Find The Best List On The Web</title>
+    <dc:date>2009-12-24T17:46:14Z</dc:date>
+    <link>http://weblist.me/</link>
+    <dc:creator>AnatEshel</dc:creator>
+    <dc:subject>web2.0 aggregator tools list sharing lists web share weblist website</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/web2.0"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/aggregator"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tools"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/list"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/sharing"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/lists"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/web"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/share"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/weblist"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/website"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://thumboo.com/">
+    <title>Thumboo! Free Website Thumbnails and PHP Script to Generate Web Screenshots</title>
+    <dc:date>2006-10-24T18:11:32Z</dc:date>
+    <link>http://thumboo.com/</link>
+    <dc:creator>obharath</dc:creator>
+    <dc:subject>thumbnail screenshot tools generator thumbnails website web screenshots online webdesign</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/thumbnail"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/screenshot"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tools"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/generator"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/thumbnails"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/website"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/web"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/screenshots"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/online"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/webdesign"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.bestcollegesonline.net/blog/2010/253/">
+    <title>30 Reasons to Check the Mirror Before a Job Interview | Best Colleges Online</title>
+    <dc:date>2010-02-15T01:30:29Z</dc:date>
+    <link>http://www.bestcollegesonline.net/blog/2010/253/</link>
+    <dc:creator>stitchza</dc:creator>
+    <dc:subject>http://www.bestcollegesonline.net/blog/2010/253/ 3 collegeonlines freak fun subvert weird</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/http%3A%2F%2Fwww.bestcollegesonline.net%2Fblog%2F2010%2F253%2F"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/3"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/collegeonlines"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/freak"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/fun"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/subvert"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/weird"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.accreditedonlinecolleges.com/blog/2009/100-great-google-docs-tips-for-students-educators/">
+    <title>100 Great Google Docs Tips for Students &amp; Educators | AccreditedOnlineColleges.org</title>
+    <dc:date>2010-01-24T14:00:00Z</dc:date>
+    <link>http://www.accreditedonlinecolleges.com/blog/2009/100-great-google-docs-tips-for-students-educators/</link>
+    <dc:creator>jmg4009</dc:creator>
+    <dc:subject>googledocs google google_docs tips howto productivity documents shortcuts docs googleapps</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/googledocs"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/google"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/google_docs"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tips"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/howto"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/productivity"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/documents"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/shortcuts"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/docs"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/googleapps"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://woorkup.com/2010/02/14/5-fresh-and-extreme-useful-fonts-for-logos/">
+    <title>5 Fresh and Extreme Useful Fonts for Logos – woorkup.com</title>
+    <dc:date>2010-02-14T22:28:36Z</dc:date>
+    <link>http://woorkup.com/2010/02/14/5-fresh-and-extreme-useful-fonts-for-logos/</link>
+    <dc:creator>chriscousins</dc:creator>
+    <dc:subject>fonts typography design logo free resources font logos gallery business</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/fonts"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/typography"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/design"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/logo"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/free"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/resources"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/font"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/logos"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/gallery"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/business"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://coliss.com/articles/build-websites/architectonics/usability/the-definitive-guide-of-styling-web-links.html">
+    <title>ハイパーテキストリンクのスタイル大全 | コリス</title>
+    <dc:date>2010-02-15T00:19:00Z</dc:date>
+    <link>http://coliss.com/articles/build-websites/architectonics/usability/the-definitive-guide-of-styling-web-links.html</link>
+    <dc:creator>halflite</dc:creator>
+    <dc:subject>css webdesign usability html link design web inspiration tips *coliss</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/css"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/webdesign"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/usability"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/html"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/link"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/design"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/web"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/inspiration"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tips"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%2Acoliss"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.ttcbn.net/no_second_life/2010/02/plus-pk-513lscansnap-s1500mdropboxgoodreaderiphone-mac-net-iphone-shopping.html">
+    <title>裁断機PLUS PK-513Lで雑誌を裁断してScanSnap S1500Mで取り込み、Dropboxで共有してGoodReaderでiPhoneに入れてみた！！ [Mac] [net] [iPhone] [今日の楽天] [Shopping] - No Second Life</title>
+    <dc:date>2010-02-14T15:35:54Z</dc:date>
+    <link>http://www.ttcbn.net/no_second_life/2010/02/plus-pk-513lscansnap-s1500mdropboxgoodreaderiphone-mac-net-iphone-shopping.html</link>
+    <dc:creator>step_by_step</dc:creator>
+    <dc:subject>scansnap iphone book ebook evernote magazine dropbox lifehacks review scan</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/scansnap"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/iphone"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/book"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/ebook"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/evernote"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/magazine"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/dropbox"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/lifehacks"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/review"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/scan"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://blog.excite.co.jp/aikouemura/10772280/">
+    <title>上村愛子オフィシャルブログ : -</title>
+    <dc:date>2010-02-15T02:48:50Z</dc:date>
+    <link>http://blog.excite.co.jp/aikouemura/10772280/</link>
+    <dc:creator>EasyGoer_</dc:creator>
+    <dc:subject>sports 言葉 2010 _unread blog オリンピック 出来事 生活 読み物</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/sports"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E8%A8%80%E8%91%89"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/2010"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/_unread"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/blog"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E5%87%BA%E6%9D%A5%E4%BA%8B"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E7%94%9F%E6%B4%BB"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E8%AA%AD%E3%81%BF%E7%89%A9"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://mashable.com/2010/02/14/google-buzz-column">
+    <title>Google Buzz Has Completely Changed the Game: Here’s How</title>
+    <dc:date>2010-02-14T19:00:20Z</dc:date>
+    <link>http://mashable.com/2010/02/14/google-buzz-column</link>
+    <dc:creator>bonhamled</dc:creator>
+    <dc:subject>google buzz googlebuzz socialmedia mashable community social trends twitter social_media</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/google"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/buzz"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/googlebuzz"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/socialmedia"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/mashable"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/community"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/social"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/trends"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/twitter"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/social_media"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.copyblogger.com/how-crappy-landing-pages-kill-email-campaigns/">
+    <title>How Crappy Landing Pages Kill Email Campaigns | Copyblogger</title>
+    <dc:date>2007-07-31T15:26:56Z</dc:date>
+    <link>http://www.copyblogger.com/how-crappy-landing-pages-kill-email-campaigns/</link>
+    <dc:creator>aflusche</dc:creator>
+    <dc:subject>email marketing landingpage design webdesign landing landingpages tips copywriting newsletter</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/email"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/marketing"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/landingpage"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/design"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/webdesign"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/landing"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/landingpages"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tips"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/copywriting"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/newsletter"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://blog.goo.ne.jp/mit_sloan/e/a1d0d692eb3f8b2759829b6f04a14232">
+    <title>何か大きなことを成し遂げるときに、最初にやること - My Life in MIT Sloan</title>
+    <dc:date>2010-02-14T08:23:56Z</dc:date>
+    <link>http://blog.goo.ne.jp/mit_sloan/e/a1d0d692eb3f8b2759829b6f04a14232</link>
+    <dc:creator>jnchkt</dc:creator>
+    <dc:subject>life lifehack 考え方 study career thinking blog lifehacks ライフハック 人生</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/life"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/lifehack"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E8%80%83%E3%81%88%E6%96%B9"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/study"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/career"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/thinking"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/blog"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/lifehacks"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/%E4%BA%BA%E7%94%9F"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.themillions.com/2009/02/diagramming-obama-sentence_16.html">
+    <title>The Millions: Diagramming the Obama Sentence</title>
+    <dc:date>2010-02-15T01:30:09Z</dc:date>
+    <link>http://www.themillions.com/2009/02/diagramming-obama-sentence_16.html</link>
+    <dc:creator>stitchza</dc:creator>
+    <dc:subject>1 http://www.themillions.com/2009/02/diagramming-obama-sentence_16.html obama politics subvert</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/1"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/http%3A%2F%2Fwww.themillions.com%2F2009%2F02%2Fdiagramming-obama-sentence_16.html"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/obama"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/politics"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/subvert"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://telekast.sourceforge.net/">
+    <title>TeleKast™</title>
+    <dc:date>2007-02-26T16:42:38Z</dc:date>
+    <link>http://telekast.sourceforge.net/</link>
+    <dc:creator>drkaos</dc:creator>
+    <dc:subject>teleprompter opensource software screencast video scripts linux freeware media collaboration</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/teleprompter"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/opensource"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/software"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/screencast"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/video"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/scripts"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/linux"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/freeware"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/media"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/collaboration"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://www.vanseodesign.com/web-design/color-theory/">
+    <title>Color Theory, The Color Wheel And Color Schemes | Van SEO Design</title>
+    <dc:date>2010-02-10T04:52:08Z</dc:date>
+    <link>http://www.vanseodesign.com/web-design/color-theory/</link>
+    <dc:creator>slittle212</dc:creator>
+    <dc:subject>color design webdesign theory graphics tips colorwheel colour tutorial colortheory</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li rdf:resource="http://delicious.com/tag/color"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/design"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/webdesign"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/theory"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/graphics"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tips"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/colorwheel"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/colour"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/tutorial"/>
+        <rdf:li rdf:resource="http://delicious.com/tag/colortheory"/>
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+</rdf:RDF>

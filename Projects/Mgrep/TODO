@@ -1,0 +1,11 @@
+# $Id: TODO,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $
+
+* Handle mbox format
+* Handle unix newline
+* Detect mailbox format
+* Detect newline format
+
+* Multi-line headers
+# $Id: TODO,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $
+
+* mgrep 'subjectOrFromPattern' mailbox1

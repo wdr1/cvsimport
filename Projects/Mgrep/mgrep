@@ -1,0 +1,8 @@
+#!/usr/local/bin/perl -w
+
+## $Id: mgrep,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $
+
+use strict;
+use Mgrep;
+
+&Mgrep::main(@ARGV);

@@ -1,0 +1,32 @@
+
+<span class="message">[% status_msg %]</span>
+<span class="error">[% error_msg %]</span>
+
+
+<H1>User-specific info</H1>
+<P>
+GUID: [% user.guid %].
+</P>
+<P>
+Email: [% user.email %].
+</P>
+
+
+<HR>
+   [% USE Dumper -%]
+<OL>
+[% FOREACH p IN products -%]
+<LI> [% p.products.product_name %] 
+<UL>
+<LI> Paid: $[% p.purchase_price %]
+<LI> ID: [% p.prod_id %]
+<LI> Lowest Seen Price: [% p.lowest_seen_price %]
+<LI> End: [% p.end_ts %]
+<LI> <A HREF="[% c.uri_for("extend", user.guid, p.prod_id) %]">Extend 2 Weeks</A>
+<LI> <A HREF="[% c.uri_for("delete", user.guid, p.prod_id) %]">Delete</A>
+</UL>
+[% END -%]
+</OL>
+
+<HR>
+[%# Dumper.dump_html(products)%]

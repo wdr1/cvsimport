@@ -1,0 +1,25 @@
+Primary Goals
+------------------------------------------------------------------------------
+-- List books I own
+-- List who's borrowed what books
+-- Make it easy to review books (w/ long review)
+-- Make it easy to review books (w/ short star ratings)
+-- Make list (best CS books, etc.)
+
+Secondary Goals
+------------------------------------------------------------------------------
+-- Recommendations
+-- Links to amazon, etc. should make it easy for each person to get
+   referal credit
+
+
+
+Other Collections
+------------------------------------------------------------------------------
+-- CDs/Tapes
+-- Comics
+-- Wine
+
+Design Decisions
+------------------------------------------------------------------------------
+-- Plug in scrapper

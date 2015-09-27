@@ -1,0 +1,43 @@
+<!--#set var="_WDR1_TITLE" value="MyWeb2 Export" -->
+<!--#include virtual="/header.shtml"-->
+
+<TABLE WIDTH=640><TR><TD>
+<FONT SIZE="+3"><B>MyWeb2 Export</B></FONT>
+<P>
+<A HREF="http://myweb2.search.yahoo.com/">MyWeb2</A> is a social
+bookmarking site, much like <A
+HREF="http://del.icio.us/">delicious</A>.  They have a lot in common,
+but there's one glaring difference: whereas delicious readily <A
+HREF="del.icio.us/settings/">imports <B>and</B> exports</A>, MyWeb2
+really only <A
+HREF="http://myweb2.search.yahoo.com/myweb/tools">imports</A>.  It
+kinda sucks if you give MyWeb a whirl and then find yourself trapped
+in it. 
+<P>
+Such was my case.
+<P>
+On the up, do they do have a snazzy <A
+HREF="http://developer.yahoo.com/search/myweb/V1/urlSearch.html">REST
+API</A>, making it pretty easy to hack something together. 
+
+When you enter your Yahoo user id, it'll fetch your MyWeb2 bookmarks &
+create an HTML bookmark file (similar to the delicious export
+format).  You can then take this file and <A
+HREF="del.icio.us/settings/">import</A> it into delicious.
+
+<P>
+<FORM ACTION="export.cgi">
+<B>User:</B> <INPUT TYPE="TEXT" NAME="u">
+<input type="submit" value="Export">
+</FORM>
+
+<FONT SIZE="-1"> source: [ <A HREF="export.pl">export.pl</A> ] [ <A
+HREF="delicious.tt">delicious.tt</A> ] </FONT>
+<P>
+<I>Based on the number of bookmarks you have, this can take up 30-40 seconds, so please be patient.  Also note that the MyWeb api limits requests to the first 1,000.</I>
+</TD></TR></TABLE>
+
+
+<!--#include virtual="/footer.shtml"-->
+
+

@@ -1,0 +1,27 @@
+<!-- $Id: blackjack.html,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $ -->
+<HTML><HEAD>
+  <TITLE>Blackjack Basic Strategy</TITLE>
+  <script src="blackjack.js" type="text/javascript"></script>
+</HEAD><BODY onLoad="initDeckArray()">
+        
+
+<H1 id="myTitle"> Monkey </H1>
+<div id="test">Old content</div>
+
+<FORM >
+<INPUT TYPE=BUTTON NAME="Click" VALUE="resetShoe" onClick="resetShoe(); return false;">
+<INPUT TYPE=BUTTON NAME="Click" VALUE="Show Local Array" onClick="showLocalArray(); return false;">
+<INPUT TYPE=BUTTON NAME="Click" VALUE="Show Shoe" onClick="showShoe(); return false;">
+<HR>
+<INPUT TYPE=BUTTON NAME="Click" VALUE="Right" onClick="clickRight(); return false;">
+<INPUT TYPE=BUTTON NAME="Click" VALUE="Wrong" onClick="clickWrong(); return false;">
+</FORM>
+<HR>
+
+<B>Array: </B> <div id="adump"></div>
+<HR>
+<B>Shoe Dump: </B> <div id="shoe_dump"></div>
+<HR>
+
+</BODY>
+</HTML>

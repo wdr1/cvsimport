@@ -1,0 +1,11 @@
+[% title = "Account Created!" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+<H2>Account created!</H2>
+If you haven't done so already, <A HREF="/linkblog.pl?a=show_download">download</A> the installer for your browser so you can start adding links today!  At this point you can also change your <A HREF="/linkblog.pl?a=prefs">preferences</A>.
+<P>
+Once you've added a few links, you can view your links on <A HREF="/linkblog.pl?a=my">your linkblog</A>.  
+
+
+[% INCLUDE footer.tt %]

@@ -1,0 +1,58 @@
+## $Id: rules_strip_basic.txt,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $
+## Basic ruleset for what you might find on the Las Vegas Strip
+## Format: P1,P2,2,3,4,5,6,7,8,9,10,11,Hint
+2,2,H,H,P,P,P,P,H,H,H,H,Split 2's & 3's on 4-7.  Hit the rest.
+2,3,-,-,-,-,H,-,-,-,-,-,Hit on non-pairs less than 8.
+2,4,-,-,H,-,-,-,-,-,-,-,Hit on non-pairs less than 8.
+2,5,-,-,-,-,-,-,-,-,H,-,Hit on non-pairs less than 8.
+2,6,-,-,-,H,-,-,-,-,-,-,Hit on non-pairs less than 8.
+2,7,H,D,D,D,D,H,H,H,H,H,Double down 9s on 3-6.  Hit the rest.
+2,8,D,D,D,D,D,D,D,D,H,H,Double down on 10 when less than 10.
+2,9,D,D,D,D,D,D,D,D,D,H,Double down on 11 when less than 11
+2,10,H,H,S,S,S,H,H,H,H,H,Let the dealer bust but they might not on a 12 vs. a 2/3
+2,11,H,H,H,D,D,H,H,H,H,H,Ace, 2 or 3 - double down on 5/6.  Hit rest
+3,3,H,H,P,P,P,P,H,H,H,H,Split 2's & 3's on 4-7.  Hit the rest.
+3,4,-,-,-,-,-,-,-,-,-,H,Hit on non-pairs less than 8.
+3,5,H,-,-,-,-,-,-,-,-,-,Hit on non-pairs less than 8.
+3,6,H,D,D,D,D,H,H,H,H,H,Double down 9s on 3-6.  Hit the rest.
+3,7,D,D,D,D,D,D,D,D,H,H,Double down on 10 when less than 10.
+3,8,D,D,D,D,D,D,D,D,D,H,Double down on 11 when less than 11
+3,9,H,H,S,S,S,H,H,H,H,H,Let the dealer bust but they might not on a 12 vs. a 2/3
+3,10,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+3,11,H,H,H,D,D,H,H,H,H,H,Ace, 2 or 3 - double down on 5/6.  Hit rest
+4,4,H,H,H,H,H,H,H,H,H,H,Never split fours.  Just hit.
+4,5,H,D,D,D,D,H,H,H,H,H,Double down 9s on 3-6.  Hit the rest.
+4,6,D,D,D,D,D,D,D,D,H,H,Double down on 10 when less than 10.
+4,7,D,D,D,D,D,D,D,D,D,H,Double down on 11 when less than 11
+4,8,H,H,S,S,S,H,H,H,H,H,Let the dealer bust but they might not on a 12 vs. a 2/3
+4,9,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+4,10,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+4,11,H,H,D,D,D,H,H,H,H,H,A, 4 & 5 double down on 4-6.  Hit otherwise.
+5,5,D,D,D,D,D,D,D,D,H,H,Double down on 10 when less than 10.
+5,6,D,D,D,D,D,D,D,D,D,H,Double down on 11 when less than 11
+5,7,H,H,S,S,S,H,H,H,H,H,Let the dealer bust but they might not on a 12 vs. a 2/3
+5,8,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+5,9,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+5,10,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+5,11,H,H,D,D,D,H,H,H,H,H,A, 4 & 5 double down on 4-6.  Hit otherwise.
+6,6,H,P,P,P,P,H,H,H,H,H,Split 6s on 3-6.  Hit the rest.
+6,7,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+6,8,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+6,9,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+6,10,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+6,11,H,D,D,D,D,H,H,H,H,H,A, 6 double down on 3-6.  Hit the rest.
+7,7,P,P,P,P,P,P,H,H,H,H,Always 7s if the dealer will bust.  Hit otherwise.
+7,8,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+7,9,S,S,S,S,S,H,H,H,H,H,Let the dealer bust on 13-16 vs. 6 or less.  Hit otherwise
+7,10,-,-,-,S,-,-,-,-,-,S,-,Stand on 17+
+7,11,S,D,D,D,D,S,S,H,H,H,A, 6 double down on 3-6.  Hit the rest.
+8,8,P,P,P,P,P,P,P,P,P,P,Always split 8 & A's
+8,9,-,-,-,-,-,-,-,-,-,-,Stand on 17+
+8,10,-,-,-,-,-,-,-,-,-,-,Stand on 17+
+8,11,S,S,S,S,S,S,S,S,S,S,Stand A, 8+
+9,9,P,P,P,P,P,S,P,P,S,S,Split 9s on everything but 7, 10, & A.  Stand on the rest
+9,10,-,-,S,-,-,-,-,-,-,-,Stand on 17+
+9,11,-,S,-,-,-,-,-,-,-,S,Stand on 17+
+10,10,-,-,S,-,-,-,-,-,-,S,Never split 10s
+10,11,-,-,-,-,-,-,-,-,-,-,Blackjack!
+11,11,P,P,P,P,P,P,P,P,P,P,Always split 8 & A's

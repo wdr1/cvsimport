@@ -1,0 +1,9 @@
+<HTML>
+<HEAD><TITLE>
+[% title ? title : "Linkblog" %]
+</TITLE></HEAD>
+<BODY BGCOLOR="[% bgcolor ? bgcolor : "white" %]"
+  LINK="#000000" VLINK="#727979"
+[% IF BODY_ONLOAD %] OnLoad="[% BODY_ONLOAD %]" [% END %]>
+<TABLE zWIDTH="100%" zBORDER="1">
+<TR>

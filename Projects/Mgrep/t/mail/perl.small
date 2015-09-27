@@ -1,0 +1,904 @@
+From ???@??? Wed Jun 08 15:49:24 2005
+Return-path: <SRS0=Km7G=UO=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Wed, 08 Jun 2005 14:26:02 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1Dg6BP-00064Y-5g
+	for wdr1@amusive.com; Wed, 08 Jun 2005 14:26:02 -0500
+Received: from [207.8.226.2] (helo=kelvin.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1Dg6BO-00064I-Jd
+	for wdr1@amusive.com; Wed, 08 Jun 2005 14:25:46 -0500
+Received: from kelvin.pobox.com (localhost [127.0.0.1])
+	by kelvin.pobox.com (Postfix) with ESMTP id 3FF103C29CF
+	for <wdr1@amusive.com>; Wed,  8 Jun 2005 15:25:52 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from kelvin (localhost [127.0.0.1])
+	by kelvin.pobox.com (Postfix) with ESMTP id DFE873C2113
+	for <wdr1@pobox.com.09158322.001.icgmh>; Wed,  8 Jun 2005 15:25:51 -0400 (EDT)
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by kelvin.pobox.com (Postfix) with ESMTP id F155C3C2932;
+	Wed,  8 Jun 2005 15:25:37 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 4F5F91780A; Wed,  8 Jun 2005 12:25:33 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 1461 invoked from network); 8 Jun 2005 19:25:30 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 8 Jun 2005 19:25:30 -0000
+Received: (qmail 30719 invoked by uid 225); 8 Jun 2005 19:25:30 -0000
+Delivered-To: losangeles-pm@pm.org
+Delivered-To: losangeles-pm@mail.pm.org
+Received: (qmail 30715 invoked by alias); 8 Jun 2005 19:25:29 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from csgsendmail.baxglobal.com (HELO csgsendmail.baxglobal.com)
+	(167.184.19.250) by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Wed, 08 Jun 2005 12:25:27 -0700
+Received: from csg.bax.baxworld.com (csgnotes.irvine.baxglobal.com
+	[167.184.19.21])
+	by csgsendmail.baxglobal.com (Switch-3.1.4/Switch-3.1.0) with ESMTP id
+	j58JPNRo001175
+	for <losangeles-pm@mail.pm.org>; Wed, 8 Jun 2005 12:25:23 -0700
+To: losangeles-pm@mail.pm.org
+MIME-Version: 1.0
+X-Mailer: Lotus Notes Release 6.5.1 January 21, 2004
+Message-ID: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+From: Ranga Nathan <RNathan@baxglobal.com>
+Date: Wed, 8 Jun 2005 12:25:20 -0700
+X-MIMETrack: S/MIME Sign by Notes Client on Ranga Nathan/AMERICA/BAX(Release
+	6.5.1|January 21, 2004) at 06/08/2005 12:25:17 PM,
+	Serialize by Notes Client on Ranga Nathan/AMERICA/BAX(Release
+	6.5.1|January 21, 2004) at 06/08/2005 12:25:17 PM,
+	Serialize complete at 06/08/2005 12:25:17 PM,
+	S/MIME Sign failed at 06/08/2005 12:25:17 PM: The cryptographic key was
+	not found,
+	Serialize by Router on CSG/AMERICA/BAX(Release 6.5.4|March 27,
+	2005) at 06/08/2005 12:25:23 PM,
+	Serialize complete at 06/08/2005 12:25:23 PM
+X-PMX-Version: 4.7.1.128075, Antispam-Engine: 2.0.3.1,
+	Antispam-Data: 2005.6.8.23
+Subject: [LA.pm] Monitoring a directory using Event.pm
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.6 required=5.6 tests=AWL,BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 695
+Lines: 19
+
+I have a need to run a script when a file is received into a directory via 
+FTP. This is Linux SuSE9 environment.
+I am looking at Event.pm documentation. Can some one show me examples of 
+how to monitor a directory for new files? 
+If there are other elegant methods I  would like to know.
+
+As a last resort, I can hand-roll one. But why re-invent the wheel?
+__________________________________________
+Ranga Nathan / CSG
+Systems Programmer - Specialist; Technical Services; 
+BAX Global Inc. Irvine-California
+Tel: 714-442-7591   Fax: 714-442-2840
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Wed Jun 08 15:49:24 2005
+Return-path: <SRS0=Km7G=UO=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Wed, 08 Jun 2005 14:38:55 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1Dg6Nt-00072u-94
+	for wdr1@amusive.com; Wed, 08 Jun 2005 14:38:55 -0500
+Received: from [208.210.124.76] (helo=fence.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1Dg6Ns-00072m-PH
+	for wdr1@amusive.com; Wed, 08 Jun 2005 14:38:41 -0500
+Received: from fence.pobox.com (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id 213D5479
+	for <wdr1@amusive.com>; Wed,  8 Jun 2005 15:38:47 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from fence (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id ED5794FF
+	for <wdr1@pobox.com.09158322.001.icgmh>; Wed,  8 Jun 2005 15:38:46 -0400 (EDT)
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by fence.pobox.com (Postfix) with ESMTP id 70B3546E;
+	Wed,  8 Jun 2005 15:38:33 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id F0E1B1777E; Wed,  8 Jun 2005 12:38:31 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 11395 invoked from network); 8 Jun 2005 19:38:26 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 8 Jun 2005 19:38:26 -0000
+Received: (qmail 2379 invoked by uid 225); 8 Jun 2005 19:38:26 -0000
+Delivered-To: losangeles-pm@pm.org
+Delivered-To: losangeles-pm@mail.pm.org
+Received: (qmail 2374 invoked by alias); 8 Jun 2005 19:38:25 -0000
+Received-SPF: pass (x1.develooper.com: domain of clay@panix.com designates
+	166.84.1.72 as permitted sender)
+Received: from mail1.panix.com (HELO mail1.panix.com) (166.84.1.72)
+	by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Wed, 08 Jun 2005 12:38:22 -0700
+Received: from mailspool2.panix.com (mailspool2.panix.com [166.84.1.79])
+	by mail1.panix.com (Postfix) with ESMTP id 85C4959264
+	for <losangeles-pm@mail.pm.org>; Wed,  8 Jun 2005 15:38:18 -0400 (EDT)
+Received: from [172.22.2.118] (unknown [63.80.136.240])
+	by mailspool2.panix.com (Postfix) with ESMTP id 9E162324BE8
+	for <losangeles-pm@mail.pm.org>; Wed,  8 Jun 2005 15:38:18 -0400 (EDT)
+Message-ID: <42A74927.2030704@panix.com>
+Date: Wed, 08 Jun 2005 12:38:15 -0700
+From: Clay Irving <clay@panix.com>
+User-Agent: Mozilla Thunderbird 1.0 (Windows/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: losangeles-pm@mail.pm.org
+References: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+In-Reply-To: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+Subject: Re: [LA.pm] Monitoring a directory using Event.pm
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.6 required=5.6 tests=BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 682
+Lines: 20
+
+Ranga Nathan wrote:
+
+>I have a need to run a script when a file is received into a directory via 
+>FTP. This is Linux SuSE9 environment.
+>I am looking at Event.pm documentation. Can some one show me examples of 
+>how to monitor a directory for new files? 
+>If there are other elegant methods I  would like to know.
+>
+>As a last resort, I can hand-roll one. But why re-invent the wheel?
+>  
+>
+
+I don't think I understand what you are trying to do -- Are you trying 
+to do something that "find" or "if (-e $filename)" can't do for you?
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Wed Jun 08 15:49:25 2005
+Return-path: <SRS0=Km7G=UO=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Wed, 08 Jun 2005 15:07:28 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1Dg6pX-000117-Uj
+	for wdr1@amusive.com; Wed, 08 Jun 2005 15:07:28 -0500
+Received: from [208.210.124.76] (helo=fence.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1Dg6pX-000112-KP
+	for wdr1@amusive.com; Wed, 08 Jun 2005 15:07:15 -0500
+Received: from fence.pobox.com (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id 1126440C
+	for <wdr1@amusive.com>; Wed,  8 Jun 2005 16:07:22 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from fence (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id 96AB650D
+	for <wdr1@pobox.com.09158322.001.icgmh>; Wed,  8 Jun 2005 16:07:21 -0400 (EDT)
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by fence.pobox.com (Postfix) with ESMTP id 02406389;
+	Wed,  8 Jun 2005 16:07:11 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 9DAD417799; Wed,  8 Jun 2005 13:07:09 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 22938 invoked from network); 8 Jun 2005 20:07:06 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 8 Jun 2005 20:07:06 -0000
+Received: (qmail 10631 invoked by uid 225); 8 Jun 2005 20:07:06 -0000
+Delivered-To: losangeles-pm@pm.org
+Delivered-To: losangeles-pm@mail.pm.org
+Received: (qmail 10626 invoked by alias); 8 Jun 2005 20:07:05 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from csgsendmail.baxglobal.com (HELO csgsendmail.baxglobal.com)
+	(167.184.19.250) by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Wed, 08 Jun 2005 13:07:01 -0700
+Received: from csg.bax.baxworld.com (csgnotes.irvine.baxglobal.com
+	[167.184.19.21])
+	by csgsendmail.baxglobal.com (Switch-3.1.4/Switch-3.1.0) with ESMTP id
+	j58K6w7X004557
+	for <losangeles-pm@mail.pm.org>; Wed, 8 Jun 2005 13:06:59 -0700
+In-Reply-To: <42A74927.2030704@panix.com>
+To: losangeles-pm@mail.pm.org
+MIME-Version: 1.0
+X-Mailer: Lotus Notes Release 6.5.1 January 21, 2004
+Message-ID: <OF0E436DEB.D671EAA4-ON8825701A.006CE283-8825701A.006D495C@baxglobal.com>
+From: Ranga Nathan <RNathan@baxglobal.com>
+Date: Wed, 8 Jun 2005 12:53:45 -0700
+X-MIMETrack: S/MIME Sign by Notes Client on Ranga Nathan/AMERICA/BAX(Release
+	6.5.1|January 21, 2004) at 06/08/2005 12:53:42 PM,
+	Serialize by Notes Client on Ranga Nathan/AMERICA/BAX(Release
+	6.5.1|January 21, 2004) at 06/08/2005 12:53:42 PM,
+	Serialize complete at 06/08/2005 12:53:42 PM,
+	S/MIME Sign failed at 06/08/2005 12:53:42 PM: The cryptographic key was
+	not found,
+	Serialize by Router on CSG/AMERICA/BAX(Release 6.5.4|March 27,
+	2005) at 06/08/2005 01:06:58 PM,
+	Serialize complete at 06/08/2005 01:06:58 PM
+X-PMX-Version: 4.7.1.128075, Antispam-Engine: 2.0.3.1,
+	Antispam-Data: 2005.6.8.23
+Subject: Re: [LA.pm] Monitoring a directory using Event.pm
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.6 required=5.6 tests=AWL,BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 1672
+Lines: 61
+
+__________________________________________
+Ranga Nathan / CSG
+Systems Programmer - Specialist; Technical Services; 
+BAX Global Inc. Irvine-California
+Tel: 714-442-7591   Fax: 714-442-2840
+
+
+
+
+Clay Irving <clay@panix.com> 
+
+Sent by: losangeles-pm-bounces@pm.org
+06/08/2005 12:38 PM
+
+To
+losangeles-pm@mail.pm.org
+cc
+
+Subject
+Re: [LA.pm] Monitoring a directory using Event.pm
+
+
+
+
+
+
+Ranga Nathan wrote:
+
+>I have a need to run a script when a file is received into a directory 
+via 
+>FTP. This is Linux SuSE9 environment.
+>I am looking at Event.pm documentation. Can some one show me examples of 
+>how to monitor a directory for new files? 
+>If there are other elegant methods I  would like to know.
+>
+>As a last resort, I can hand-roll one. But why re-invent the wheel?
+> 
+>
+
+I don't think I understand what you are trying to do -- Are you trying 
+to do something that "find" or "if (-e $filename)" can't do for you?
+
+The host is receiving files continuously via FTP. As soon as the file is 
+receive it needs to be processed by a script and the file moved to a 
+'processed' directory. Currently we have a script that runs under xinetd. 
+It loops, sleeping for 30 seconds after processing the files. I want to 
+make it event based. That is the script should run only WHEN the file 
+appears as a result of FTP, essentially turning a batch type process into 
+event-based processing.
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Wed Jun 08 15:49:26 2005
+Return-path: <SRS0=Km7G=UO=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Wed, 08 Jun 2005 15:16:45 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1Dg6yW-0001gs-CQ
+	for wdr1@amusive.com; Wed, 08 Jun 2005 15:16:45 -0500
+Received: from [208.210.124.72] (helo=snug.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1Dg6yV-0001gk-VX
+	for wdr1@amusive.com; Wed, 08 Jun 2005 15:16:32 -0500
+Received: from snug.pobox.com (localhost [127.0.0.1])
+	by snug.pobox.com (Postfix) with ESMTP id EB37A537
+	for <wdr1@amusive.com>; Wed,  8 Jun 2005 16:16:37 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from snug (localhost [127.0.0.1])
+	by snug.pobox.com (Postfix) with ESMTP id 1E26B52F
+	for <wdr1@pobox.com.09158322.001.icgmh>; Wed,  8 Jun 2005 16:16:37 -0400 (EDT)
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by snug.pobox.com (Postfix) with ESMTP id 78C5852D;
+	Wed,  8 Jun 2005 16:16:14 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 2072A1779D; Wed,  8 Jun 2005 13:16:14 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 27286 invoked from network); 8 Jun 2005 20:16:11 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 8 Jun 2005 20:16:11 -0000
+Received: (qmail 13132 invoked by uid 225); 8 Jun 2005 20:16:10 -0000
+Delivered-To: losangeles-pm@pm.org
+Delivered-To: losangeles-pm@mail.pm.org
+Received: (qmail 13127 invoked by alias); 8 Jun 2005 20:16:10 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from rdns.151.240.218.216.fre.communitycolo.net (HELO
+	otis.netapt.com) (216.218.240.151)
+	by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Wed, 08 Jun 2005 13:16:07 -0700
+Received: from otis.netapt.com (localhost [127.0.0.1])
+	by otis.netapt.com (8.12.8/8.12.8) with ESMTP id j58KAxGI012284;
+	Wed, 8 Jun 2005 13:10:59 -0700
+Received: from localhost (ofer@localhost)
+	by otis.netapt.com (8.12.8/8.12.8/Submit) with ESMTP id j58KAx2F012280; 
+	Wed, 8 Jun 2005 13:10:59 -0700
+X-Authentication-Warning: otis.netapt.com: ofer owned process doing -bs
+Date: Wed, 8 Jun 2005 13:10:59 -0700 (PDT)
+From: Ofer Nave <ofer@netapt.com>
+To: Ranga Nathan <RNathan@baxglobal.com>
+In-Reply-To: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+Message-ID: <Pine.LNX.4.44.0506081307480.6113-100000@otis.netapt.com>
+MIME-Version: 1.0
+Cc: losangeles-pm@mail.pm.org
+Subject: Re: [LA.pm] Monitoring a directory using Event.pm
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+Reply-To: Ofer Nave <ofer@netapt.com>
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.5 required=5.6 tests=AWL,BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 1706
+Lines: 46
+
+
+I'm no expert, so I could be wrong, but to my knowledge:
+
+The Event module, unfortunately, has nothing to do with this.  What you 
+want is an event-based filesystem, where modifications can trigger 
+actions.  The standard linux file system doesn't do this.  There are some 
+groovy new FSs that do this, but you probably don't want to go that route.
+
+Although it seems brute force, then best solution is probably write your 
+script as daemon (run in the background continuously) and have it 
+continuously look for new files to appear (sleep 1 in a loop or 
+something).
+
+If you're heart is dead set on making this event driven, then make your 
+daemon listen on a port, and modify your client-side code so that it 
+connects to that port and sends a message after FTPing the file.
+
+-ofer
+
+On Wed, 8 Jun 2005, Ranga Nathan wrote:
+
+> I have a need to run a script when a file is received into a directory via 
+> FTP. This is Linux SuSE9 environment.
+> I am looking at Event.pm documentation. Can some one show me examples of 
+> how to monitor a directory for new files? 
+> If there are other elegant methods I  would like to know.
+> 
+> As a last resort, I can hand-roll one. But why re-invent the wheel?
+> __________________________________________
+> Ranga Nathan / CSG
+> Systems Programmer - Specialist; Technical Services; 
+> BAX Global Inc. Irvine-California
+> Tel: 714-442-7591   Fax: 714-442-2840
+> 
+> _______________________________________________
+> Losangeles-pm mailing list
+> Losangeles-pm@pm.org
+> http://mail.pm.org/mailman/listinfo/losangeles-pm
+> 
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Wed Jun 08 15:49:28 2005
+Return-path: <SRS0=Km7G=UO=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Wed, 08 Jun 2005 17:17:12 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1Dg8r4-0003aL-6N
+	for wdr1@amusive.com; Wed, 08 Jun 2005 17:17:12 -0500
+Received: from [208.58.1.198] (helo=lime.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1Dg8r3-0003aC-H9
+	for wdr1@amusive.com; Wed, 08 Jun 2005 17:16:57 -0500
+Received: from lime.pobox.com (localhost [127.0.0.1])
+	by lime.pobox.com (Postfix) with ESMTP id 8711C4D8FF9
+	for <wdr1@amusive.com>; Wed,  8 Jun 2005 18:17:04 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from lime (localhost [127.0.0.1])
+	by lime.pobox.com (Postfix) with ESMTP id 22A2E4D8F7C
+	for <wdr1@pobox.com.09158322.001.icgmh>; Wed,  8 Jun 2005 18:17:04 -0400 (EDT)
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by lime.pobox.com (Postfix) with ESMTP id 2C99B4D8F01;
+	Wed,  8 Jun 2005 18:16:25 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id B5A8F177A1; Wed,  8 Jun 2005 15:16:16 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 30529 invoked from network); 8 Jun 2005 22:16:13 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 8 Jun 2005 22:16:13 -0000
+Received: (qmail 12622 invoked by uid 225); 8 Jun 2005 22:16:12 -0000
+Delivered-To: losangeles-pm@pm.org
+Delivered-To: losangeles-pm@mail.pm.org
+Received: (qmail 12617 invoked by alias); 8 Jun 2005 22:16:12 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from mail.corp.valueclick.com (HELO vcexch01.corp.valueclick.com)
+	(216.34.207.14) by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Wed, 08 Jun 2005 15:16:10 -0700
+Received: from vchqex01.wl.corp.valueclick.com ([192.168.10.53]) by
+	vcexch01.corp.valueclick.com with Microsoft SMTPSVC(5.0.2195.6713); 
+	Wed, 8 Jun 2005 15:16:02 -0700
+Received: from tbrannon.dv.valueclick.com by vchqex01.wl.corp.valueclick.com;
+	08 Jun 2005 15:16:02 -0700
+From: Terrence Brannon <tbrannon@valueclick.com>
+To: Ranga Nathan <RNathan@baxglobal.com>
+In-Reply-To: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+References: <OF931D2CB8.573F0FE8-ON8825701A.006A68C4-8825701A.006AAF6A@baxglobal.com>
+Date: Wed, 08 Jun 2005 15:16:02 -0700
+Message-Id: <1118268962.9621.25.camel@tbrannon.dv.valueclick.com>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.4 (2.0.4-4) 
+X-OriginalArrivalTime: 08 Jun 2005 22:16:02.0826 (UTC)
+	FILETIME=[A82B86A0:01C56C77]
+X-Brightmail-Tracker: AAAAAQAAAAQ=
+X-Whitelist: TRUE
+Cc: losangeles-pm@mail.pm.org
+Subject: Re: [LA.pm] Monitoring a directory using Event.pm
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.6 required=5.6 tests=BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 714
+Lines: 19
+
+On Wed, 2005-06-08 at 12:25 -0700, Ranga Nathan wrote:
+> I have a need to run a script when a file is received into a directory via 
+> FTP. 
+
+one question: does FTP show the file when the write is complete or while
+it is writing? There could be problems if you start processing a file
+which is not completely written.
+
+In former jobs, I trailed the intended upload with a small file
+signalling that the intended file was complete. Alternatively, I would
+rename the uploaded file to the file that the monitor process was
+looking for once it was completely uploaded.
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Thu Jun 23 10:58:40 2005
+Return-path: <SRS0=xCTp=U5=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Thu, 23 Jun 2005 11:06:29 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1DlUDY-0004IV-C0
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:06:29 -0500
+Received: from [208.210.124.76] (helo=fence.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1DlUDX-0004IL-Ss
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:06:16 -0500
+Received: from fence.pobox.com (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id 86E3A51F
+	for <wdr1@amusive.com>; Thu, 23 Jun 2005 12:06:21 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by fence.pobox.com (Postfix) with ESMTP id B35794FC;
+	Thu, 23 Jun 2005 12:06:13 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 6D80A177AE; Thu, 23 Jun 2005 09:06:11 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 28567 invoked from network); 23 Jun 2005 16:06:08 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 23 Jun 2005 16:06:08 -0000
+Received: (qmail 21027 invoked by uid 225); 23 Jun 2005 16:06:08 -0000
+Delivered-To: losangeles-pm@pm.org
+Received: (qmail 21023 invoked by alias); 23 Jun 2005 16:06:07 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from androtics.com (HELO rez.androtics.com) (72.21.58.50)
+	by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Thu, 23 Jun 2005 09:06:04 -0700
+Received: from pcp09187796pcs.towson01.md.comcast.net ([69.137.236.166]
+	helo=[192.168.1.100]) by rez.androtics.com with esmtpa (Exim 4.50)
+	id 1DlUDH-0004LX-Rw
+	for losangeles-pm@pm.org; Thu, 23 Jun 2005 09:06:00 -0700
+Mime-Version: 1.0
+X-Sender: david:cloudgraphics.com@cloudgraphics.com
+Message-Id: <p05010401bee08c75738c@[192.168.1.100]>
+In-Reply-To: <42A671AD.5070207@modperlcookbook.org>
+References: <p05010402becbfc4fcfc5@[192.168.1.100]>
+	<42A671AD.5070207@modperlcookbook.org>
+Date: Thu, 23 Jun 2005 12:05:51 -0400
+To: losangeles-pm@pm.org
+From: David Heayn <david@cloudgraphics.com>
+X-AntiAbuse: This header was added to track abuse,
+	please include it with any abuse report
+X-AntiAbuse: Primary Hostname - rez.androtics.com
+X-AntiAbuse: Original Domain - pm.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - cloudgraphics.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: [LA.pm] OT: changing the date timezone for perl use
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.2 required=5.6 tests=AWL,BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 569
+Lines: 18
+
+I have an ultra simple perl script that requests the current 
+date/time from a shared server (not mine) then spits out the html 
+dressing.
+
+My problem is the server is set to Pacific time and I need Eastern time.
+
+Anyone have any suggestions/alternative server time mechanisms. I'd 
+rather not go in and program a complete time zone remapping function.
+
+Thanks.
+
+David Heayn * http://www.cloudgraphics.com * 213/925.3283
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Thu Jun 23 10:58:40 2005
+Return-path: <SRS0=xCTp=U5=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Thu, 23 Jun 2005 11:21:40 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1DlUSF-0005mZ-FY
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:21:40 -0500
+Received: from [208.210.124.76] (helo=fence.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1DlUSE-0005mR-WB
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:21:27 -0500
+Received: from fence.pobox.com (localhost [127.0.0.1])
+	by fence.pobox.com (Postfix) with ESMTP id BCC95560
+	for <wdr1@amusive.com>; Thu, 23 Jun 2005 12:21:32 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by fence.pobox.com (Postfix) with ESMTP id 03E1D565;
+	Thu, 23 Jun 2005 12:21:24 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 09684177AE; Thu, 23 Jun 2005 09:21:23 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 2148 invoked from network); 23 Jun 2005 16:21:19 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 23 Jun 2005 16:21:19 -0000
+Received: (qmail 26654 invoked by uid 225); 23 Jun 2005 16:21:19 -0000
+Delivered-To: losangeles-pm@pm.org
+Received: (qmail 26649 invoked by alias); 23 Jun 2005 16:21:18 -0000
+Received-SPF: pass (x1.develooper.com: local policy)
+Received: from messenger.shopzilla.com (HELO messenger1.bizrate.com)
+	(216.52.235.25) by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Thu, 23 Jun 2005 09:21:13 -0700
+Received: from [172.16.18.5] by messenger1.bizrate.com
+	(Sun Java System Messaging Server 6.2-1 (built Feb 24 2005))
+	with ESMTPS id <0IIJ00JCVPF86240@messenger1.bizrate.com> for
+	losangeles-pm@pm.org; Thu, 23 Jun 2005 09:21:08 -0700 (PDT)
+Date: Thu, 23 Jun 2005 09:21:07 -0700
+From: David Pisoni <dpisoni@shopzilla.com>
+In-reply-to: <p05010401bee08c75738c@[192.168.1.100]>
+To: David Heayn <david@cloudgraphics.com>
+Message-id: <9ad4890f7a96b61de5884af462ceda29@shopzilla.com>
+MIME-version: 1.0
+X-Mailer: Apple Mail (2.622)
+References: <p05010402becbfc4fcfc5@[192.168.1.100]>
+	<42A671AD.5070207@modperlcookbook.org>
+	<p05010401bee08c75738c@[192.168.1.100]>
+Cc: losangeles-pm@pm.org
+Subject: Re: [LA.pm] OT: changing the date timezone for perl use
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.3 required=5.6 tests=AWL,BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 2249
+Lines: 65
+
+On Jun 23, 2005, at 9.05, David Heayn wrote:
+
+> I have an ultra simple perl script that requests the current
+> date/time from a shared server (not mine) then spits out the html
+> dressing.
+>
+> My problem is the server is set to Pacific time and I need Eastern 
+> time.
+>
+> Anyone have any suggestions/alternative server time mechanisms. I'd
+> rather not go in and program a complete time zone remapping function.
+>
+> Thanks.
+>
+> David Heayn * http://www.cloudgraphics.com * 213/925.3283
+> _______________________________________________
+> Losangeles-pm mailing list
+> Losangeles-pm@pm.org
+> http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+David,
+
+I just ran into this issue recently.  I came up with a solution, though 
+it isn't entirely portable, so YMMV.  This works on my Linux system and 
+my MacOS X system:
+
+print scalar localtime;	 	# outputs local Pacific time
+{ # block to insulate time zone change
+	local $ENV{TZ} = 'America/New York'; # Or I could say 'EST5EDT'
+	print scalar localtime; # outputs local Eastern time
+}
+
+The valid values for the TZ environment variable are the files located 
+in '/usr/share/zoneinfo' (on both my systems.)  There are files at the 
+top level (e.g., 'EST5EDT') and a directory hierarchy (e.g., 
+'America/New_York').  Spaces in the environment variable get mapped to 
+underscores on the filesystem.
+
+On my systems, the default state of the environment variable is 
+undefined: other factors are determining the home locale.  The 
+environment variable seems to serve as an "override", at least from the 
+perspective of the perl runtime.
+
+In my exploration of the topic I ran across POSIX::tzset, which seemed 
+entirely unnecessary on my system.  Perhaps some systems would require 
+this call.  Essentially all it does is set the internal time zone to 
+the current value of $ENV{TZ}.
+
+Enjoy,
+
+David Pisoni
+dpisoni@shopzilla.com
+Director, Web Engineering
+Shopzilla, Inc. <http://www.shopzilla.com/>
+
+"One machine can do the work of fifty ordinary men. No machine can do 
+the work of one extraordinary man." - Elbert Hubbard, author, editor, 
+printer (1856-1915)
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+
+From ???@??? Thu Jun 23 10:58:40 2005
+Return-path: <SRS0=xCTp=U5=pm.org=losangeles-pm-bounces@bounce2.pobox.com>
+Envelope-to: wdr1@amusive.com
+Delivery-date: Thu, 23 Jun 2005 11:51:01 -0500
+Received: from amusive by ns3.amusive.com with local-bsmtp (Exim 4.50)
+	id 1DlUub-0008Sl-3y
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:51:01 -0500
+Received: from [208.58.1.193] (helo=boggle.pobox.com)
+	by ns3.amusive.com with esmtp (Exim 4.50)
+	id 1DlUua-0008Sd-NY
+	for wdr1@amusive.com; Thu, 23 Jun 2005 11:50:45 -0500
+Received: from boggle.pobox.com (localhost [127.0.0.1])
+	by boggle.pobox.com (Postfix) with ESMTP id 95B1A10A7BE
+	for <wdr1@amusive.com>; Thu, 23 Jun 2005 12:50:50 -0400 (EDT)
+Delivered-To: wdr1@pobox.com
+Received: from x6.develooper.com (x6.develooper.com [63.251.223.186])
+	by boggle.pobox.com (Postfix) with ESMTP id 9FC53107B7A;
+	Thu, 23 Jun 2005 12:50:33 -0400 (EDT)
+Received: from x6.develooper.com (localhost.localdomain [127.0.0.1])
+	by x6.develooper.com (Postfix) with ESMTP
+	id 97708177B6; Thu, 23 Jun 2005 09:49:56 -0700 (PDT)
+Delivered-To: mailman-losangeles-pm@mailman.pm.dev
+Received: (qmail 10050 invoked from network); 23 Jun 2005 16:49:53 -0000
+Received: from x1a.develooper.com (HELO x1.develooper.com) (216.52.237.111)
+	by lists.develooper.com with SMTP; 23 Jun 2005 16:49:53 -0000
+Received: (qmail 4237 invoked by uid 225); 23 Jun 2005 16:49:53 -0000
+Delivered-To: losangeles-pm@pm.org
+Received: (qmail 4228 invoked by alias); 23 Jun 2005 16:49:53 -0000
+Received-SPF: neutral (x1.develooper.com: local policy)
+Received: from shawidc-mo1.cg.shawcable.net (HELO pd3mo2so.prod.shaw.ca)
+	(24.71.223.10) by la.mx.develooper.com (qpsmtpd/0.28) with ESMTP;
+	Thu, 23 Jun 2005 09:49:49 -0700
+Received: from pd5mr8so.prod.shaw.ca
+	(pd5mr8so-qfe3.prod.shaw.ca [10.0.141.184]) by l-daemon
+	(Sun ONE Messaging Server 6.0 HotFix 1.01 (built Mar 15 2004))
+	with ESMTP id <0IIJ00D5DQQQ6P44@l-daemon> for losangeles-pm@pm.org; Thu,
+	23 Jun 2005 10:49:38 -0600 (MDT)
+Received: from pn2ml6so.prod.shaw.ca ([10.0.121.150])
+	by pd5mr8so.prod.shaw.ca (Sun ONE Messaging Server 6.0 HotFix 1.01
+	(built Mar
+	15 2004)) with ESMTP id <0IIJ0089MQQQYT20@pd5mr8so.prod.shaw.ca> for
+	losangeles-pm@pm.org; Thu, 23 Jun 2005 10:49:38 -0600 (MDT)
+Received: from PEPE.PSDT.com
+	(S01060004e24b9857.gv.shawcable.net [24.108.69.34]) by l-daemon
+	(iPlanet Messaging Server 5.2 HotFix 1.18 (built Jul 28 2003))
+	with ESMTP id <0IIJ00C06QQP0O@l-daemon> for losangeles-pm@pm.org; Thu,
+	23 Jun 2005 10:49:38 -0600 (MDT)
+Date: Thu, 23 Jun 2005 09:50:07 -0700
+From: Peter Scott <Peter@PSDT.com>
+In-reply-to: <p05010401bee08c75738c@[192.168.1.100]>
+To: David Heayn <david@cloudgraphics.com>, losangeles-pm@pm.org
+Message-id: <6.1.2.0.2.20050623094535.03407ba8@mail.webquarry.com>
+MIME-version: 1.0
+X-Mailer: QUALCOMM Eudora Version 6.1.2.0
+References: <p05010402becbfc4fcfc5@[192.168.1.100]>
+	<42A671AD.5070207@modperlcookbook.org>
+	<p05010401bee08c75738c@[192.168.1.100]>
+Subject: Re: [LA.pm] OT: changing the date timezone for perl use
+X-BeenThere: losangeles-pm@pm.org
+X-Mailman-Version: 2.1.6
+Precedence: list
+List-Id: Los Angeles Perl Mongers <losangeles-pm.pm.org>
+List-Unsubscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=unsubscribe>
+List-Archive: <http://mail.pm.org/pipermail/losangeles-pm>
+List-Post: <mailto:losangeles-pm@pm.org>
+List-Help: <mailto:losangeles-pm-request@pm.org?subject=help>
+List-Subscribe: <http://mail.pm.org/mailman/listinfo/losangeles-pm>,
+	<mailto:losangeles-pm-request@pm.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Errors-To: losangeles-pm-bounces@pm.org
+X-Spam-Checker-Version: SpamAssassin 3.0.2 (2004-11-16) on ns3.amusive.com
+X-Spam-Status: No, score=-2.6 required=5.6 tests=BAYES_00 autolearn=ham 
+	version=3.0.2
+X-Spam-Level: 
+Content-Length: 1097
+Lines: 37
+
+At 09:05 AM 6/23/2005, David Heayn wrote:
+>I have an ultra simple perl script that requests the current
+>date/time from a shared server (not mine) then spits out the html
+>dressing.
+>
+>My problem is the server is set to Pacific time and I need Eastern time.
+>
+>Anyone have any suggestions/alternative server time mechanisms. I'd
+>rather not go in and program a complete time zone remapping function.
+
+Um, since eastern time is always 3 hours ahead of pacific, you should 
+just be able to do
+
+
+% date
+Thu Jun 23 09:47:35 PDT 2005
+
+% perl -MDate::Parse -le 'print scalar localtime(str2time("Thu Jun 23 
+09:38:22 PDT 2005")+3600*3)'
+Thu Jun 23 12:38:22 2005
+
+
+I can't tell from your post whether your program is running on the same 
+machine that's giving you the date you want, what format you're getting 
+it in, or what format you want it in.
+-- 
+Peter Scott
+Pacific Systems Design Technologies
+http://www.perldebugged.com/
+http://www.perlmedic.com/
+
+_______________________________________________
+Losangeles-pm mailing list
+Losangeles-pm@pm.org
+http://mail.pm.org/mailman/listinfo/losangeles-pm
+
+
+

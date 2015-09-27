@@ -1,0 +1,54 @@
+[% title = "Linkblog Preferences" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+<H2>[% user %]'s Preferences</H2>
+
+<TABLE WIDTH="70%" BORDER=1><TR><TD>
+<FORM>
+<INPUT TYPE=HIDDEN NAME=a VALUE=save_prefs>
+<TABLE>
+<TR><TD COLSPAN=3>
+<IMG SRC="/img/pixel.gif" HEIGHT=10 WIDTH=0>
+</TD></TR>
+<TR>
+ <TD>
+   <input type="checkbox" name="vis" value="yes" [% vis %]> <B>Public linkblog</B>
+ </TD>
+ <TD>
+ </TD>
+ <TD>[% IF vis_updated %] <FONT COLOR="RED">Updated</FONT> [% END %]</TD>
+</TR>
+<TR><TD COLSPAN=3>
+<FONT SIZE="-1"><I>
+If your linkblog is public, anyone can see it (but not modify it).  If your linkblog is private, only you can see it.  Note that for RSS feeds to be useful your linkblog should be public.
+</I></FONT>
+</TD></TR>
+<TR><TD COLSPAN=3>
+<IMG SRC="/img/pixel.gif" HEIGHT=10 WIDTH=0><HR><IMG SRC="/img/pixel.gif" HEIGHT=10 WIDTH=0>
+</TD></TR>
+
+<TR>
+ <TD>
+   <input type="checkbox" name="desc" value="yes" [% desc %]> <B>Prompt for link descriptions</B>
+ </TD>
+ <TD>
+ </TD>
+ <TD>[% IF desc_updated %] <FONT COLOR="RED">Updated</FONT> [% END %]</TD>
+</TR>
+<TR><TD COLSPAN=3>
+<FONT SIZE="-1"><I>
+When adding a link, you can choose to be prompted for a description of the link.  It requires an extra step, but can be handy for adding a note or two about what was compelling about the link, etc.
+</I></FONT>
+</TD></TR>
+
+<TR><TD COLSPAN=3 ALIGN="RIGHT">
+<INPUT TYPE=SUBMIT VALUE="Update">
+</TD></TR>
+</TABLE>
+</FORM>
+
+</TD></TR></TABLE>
+
+<IMG SRC="/img/pixel.gif" HEIGHT=50 WIDTH=0>
+[% INCLUDE footer.tt %]

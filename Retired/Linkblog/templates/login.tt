@@ -1,0 +1,53 @@
+[% title = "Linkblog Login" %]
+[% BODY_ONLOAD = "document.FORM_LOGIN.log_username.focus();" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+[% IF error %]
+<FONT COLOR="RED"><B>
+[% error %]
+</B></FONT>
+<P>
+[% END %]
+
+<FORM NAME="FORM_LOGIN" METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="a" VALUE="login">
+<INPUT TYPE="HIDDEN" NAME="r" VALUE="[% redirect %]">
+
+<TABLE WIDTH="100%">
+<TR><TD>
+<IMG SRC="/img/pixel.gif" WIDTH="350" HEIGHT='0'>
+</TD></TR>
+<TR><TD ALIGN=CENTER>
+
+<TABLE zWIDTH="100%">
+<TR>
+<TD ALIGN="RIGHT"><B>User Name:</B></TD>
+<TD><INPUT TYPE="text" NAME="log_username"></TD>
+</TR>
+<TR>
+<TD ALIGN="RIGHT"><B>Password:</B></TD>
+<TD><INPUT TYPE="PASSWORD" NAME="log_password"></TD>
+</TR>
+<TR><TD COLSPAN="2" ALIGN="LEFT">
+<INPUT TYPE="CHECKBOX" NAME="remember"> Remember me next time.
+</TD></TR>
+<TR><TD COLSPAN="2" ALIGN="RIGHT">
+<INPUT TYPE="SUBMIT" VALUE="Login">
+</TD></TR>
+</TABLE>
+
+</FORM>
+</TD></TR>
+<TR><TD>
+<IMG SRC="/img/pixel.gif" WIDTH="0" HEIGHT='30'>
+</TD></TR>
+<TR><TD ALIGN=CENTER>
+[% IF nonav %]
+<FONT SIZE=-1><I>Don't have an account?  <A HREF="http://linkblog.org/linkblog.pl?a=show_create" TARGET=_blank>Sign Up!</A></I></FONT>
+[% END %]
+</TD></TR>
+
+</TABLE>
+
+[% INCLUDE footer.tt %]

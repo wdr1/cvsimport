@@ -1,0 +1,19 @@
+## $Id: simple.stxt,v 1.1.1.1 2010/08/14 04:57:49 wdr1 Exp $
+## comment
+## blank line
+
+## empty line w/ white space
+      
+  ## leading white space
+:incorrect_response_weight=2
+:initial_hand_weight=1
+2,2,H,H,P,P,P,P,H,H,H,H,Split 2's & 3's on 4-7.  Hit the rest.
+2,3,-,-,-,-,H,-,-,-,-,-,Hit on non-pairs less than 8.
+2,4,-,-,H,-,-,-,-,-,-,-,Hit on non-pairs less than 8.
+2,5,-,-,-,-,-,-,-,-,H,-,Hit on non-pairs less than 8.
+2,6,-,-,-,H,-,-,-,-,-,-,Hit on non-pairs less than 8.
+2,7, H,D, D ,D,D,H ,H,H,H,H,Double down 9s on 3-6.  Hit the rest.
+2,8,D,D,D,D,D,D,D,D,H,H,Double down on 10 when less than 10.
+2,9,D,D,D,D,D,D,D,D,D,H,Double down on 11 when less than 11
+2,10,H,H,S,S,S,H,H,H,H,H,Let the dealer bust but they might not on a 12 vs. a 2/3
+2,11,H,H,H,D,D,H,H,H,H,H,Ace or 2 or 3 - double down on 5/6.  Hit rest

@@ -1,0 +1,87 @@
+Stupid Bash Tricks
+
+- Declarations of assumptions
+  - basics of bash, you've tweaked your .bashrc, .bash_profile, etc.,
+    job control
+  - goal is to become more effective with bash
+  - reduce typing w/o becoming incredibly crypted
+  - Target audience: 
+      - doing dev (in particular web-dev)
+      - doing sysadmin on a lot of different boxes
+
+- Petty Annoyances
+  - how to getting color
+  - setting default editors & pager
+  - let us know when jobs are done (set
+  - useful command prompts
+  - changing the window size (shopt -s checkwinsize)
+  - setting your printer
+  - tweaking history
+  - core file
+  - why you need to export
+
+- Bash Aliases
+  - sc - make our lives easier
+       - TEST your changes!
+  - Linking commands together on the command line
+  - EXAMPLE: equiv of MS rebuild & execute
+  - EXAMPLE: ping the server while tailling the logs
+  - changed
+  - ssh-agent integration (ssh-add & sab)
+  - hoping around machines
+  - maid
+  
+
+- Bash Functions
+  - Integration with mozilla
+    - Putting URLs in 's to protect &'s
+    - EXAMPLE: look up something in bugzilla
+  - psg/psgk/psgk9
+  - cvslog  
+  - logdiff
+  - dynamically decompressing files (gless)
+  - push_me
+  - tstar (timestamp tar)
+  - tscp
+  - tailing the most recent logfile 
+  - pwdfile
+  - a better which (determine if built-in, alias, etc.)
+
+- On the command-line
+  - GNU Readline
+  - navigating history
+    - !!
+    - !<letter>
+    - ^R
+
+- Env Vars Changing directories
+  - $PWD
+  - changing CVS repositories
+  - setting cycle
+  - Machine lists ($MY_SERVERS)
+    - for i in $MY_SERVERS
+
+- Structuring our files
+  - prevent cruft (e.g., old project aliases)
+  - loading project files
+    - prevent infinite loops (a la #define, etc.)
+  - loading files in a directory  
+  - loading settings per machine
+    - EXAMPLE: set ENV to indicate debugging in dev
+      - SUB-EXAMPLE: C/Perl snippet to watch that env
+
+- Command line completion
+  - builtins
+  - EXAMPLE: dirs for cd 
+  - EXAMPLE: ssh'ing around
+  - Backward compatability
+
+- Pointers to documentation
+  - ORA book
+  - man page
+  - Howto
+
+?? Are these worthwhile exploring ??
+   -- CDPATH?
+   -- GLOBIGNORE
+   -- HOSTFILE

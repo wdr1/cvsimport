@@ -1,0 +1,69 @@
+<HTML><HEAD><TITLE>Sandbox</TITLE>
+<SCRIPT src="prototype.js"></script>
+<style type="text/css">
+div.clicked {
+  margin: 2px;
+  color: red;
+  font-size: 16pt
+}
+</style>
+</HEAD>
+<BODY>
+<script type="text/javascript">
+    var Colors = ["Red", "Yellow", "Blue", "Green", "Maroon"];
+    var Names  = ["Bill", "Sang", "Brandon", "Geoff"];
+    var active = [];
+    var buffer = [];
+
+    function colors() {
+      active = Colors;
+      $('playerHand').update( active.shift() ).addClassName('clicked');    
+//      $('playerHand').update('Your Hand!').addClassName('clicked').show();
+    }
+
+    function names() {
+      active = Names;
+      $('playerHand').update( active.shift() ).addClassName('clicked');
+    }
+
+    function ajaxWay() {
+      $('playerHand').update( active.shift() ).addClassName('clicked');
+
+      if ( active.length == 0 ) {
+        console.log( "active has EMPTY... " );
+          
+        active = buffer;
+          
+        new Ajax.Request('http://wdr1.com/trainer/test_dumper.cgi?', {
+          method:'get',
+          onSuccess: function(transport){
+              buffer = transport.responseText.evalJSON().randomNumbers;
+          }
+        });
+      } else {
+        console.log( "active has stuff... " );
+      }
+    }
+
+    new Ajax.Request('http://wdr1.com/trainer/test_dumper.cgi?c=8', {
+      method:'get',
+      onSuccess: function(transport){
+        var tmp = transport.responseText.evalJSON().randomNumbers;
+        active = tmp.splice(0,3);
+        buffer = tmp.splice(3,7);
+      }
+    });
+
+</script>
+<HR>
+    Colors: <INPUT VALUE="Click" TYPE=BUTTON onClick="colors()"> <BR>
+    Names: <INPUT VALUE="Click" TYPE=BUTTON onClick="names()"> <BR>
+    Ajax: <INPUT VALUE="Click" TYPE=BUTTON onClick="ajaxWay()"> <BR>
+ <HR>
+
+<div id="playerHand">
+click the button.
+</div>
+    
+</BODY>
+</HTML>    

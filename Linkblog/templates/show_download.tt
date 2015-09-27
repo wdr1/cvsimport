@@ -1,0 +1,50 @@
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+<TABLE zWIDTH="100%">
+<TR>
+<TD WIDTH="50%">[ <B><A NAME="IE">Setup for Internet Explorer</A></B> ]</TD>
+<TD WIDTH="50%">[ <A HREF="#Mozilla">Go to setup for Mozilla</A> ]</TD>
+</TR>
+</TABLE>
+
+<OL>
+<LI> Click on <A HREF="/download/linkblog.reg">linkblog.reg</A> &amp; choose "Open"<P>
+<IMG SRC="/img/screenshots/ie_save_reg.jpg" WIDTH="398" HEIGHT="295">
+<P>
+<LI> Click "Yes" when you're prompted to accept the changes.
+<P>
+<IMG SRC="/img/screenshots/ie_reg_add.jpg" WIDTH="564" HEIGHT="127">
+<P>
+<LI> If you haven't done so already, be sure to <A HREF="http://linkblog.org/linkblog.pl?a=show_create">sign-up</A> for an account.
+<P>
+<LI> Restart your browser.
+<P>
+<LI> That's it!  Linkblog is now installed!  
+</OL>
+
+<TABLE zWIDTH="100%">
+<TR>
+<TD WIDTH="50%">[ <B><A HREF="#IE">Go to setup for Internet Explorer</A></B> ]</TD>
+<TD WIDTH="50%">[ <A NAME="Mozilla">Setup for Mozilla</A> ]</TD>
+</TR>
+</TABLE>
+
+<OL>
+<LI> Click on <A HREF="/download/linkblog.xpi">linkblog.xpi</A>
+<P>
+<LI> Click "Install now" & follow the standard instructions.
+<P>
+<LI> If you haven't done so already, be sure to <A HREF="http://linkblog.org/linkblog.pl?a=show_create">sign-up</A> for an account.
+<P>
+<LI> Restart your browser.
+<P>
+<LI> That's it!  Linkblog is now installed!  
+</OL>
+
+
+
+<IMG SRC="/img/pixel.gif" WIDTH="400" HEIGHT='0'>
+
+[% INCLUDE footer.tt %]
+

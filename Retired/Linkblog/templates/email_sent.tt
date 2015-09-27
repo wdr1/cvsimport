@@ -1,0 +1,14 @@
+[% title = "Welcome to Linkblog!" %]
+[% INCLUDE header.tt %]
+[% INCLUDE spine.tt %]
+
+<h2>Email sent!</h2>
+<P>
+Please check your inbox.
+<P>
+If you haven't received the email in the
+next couple of hours, please try submitting your request again.  
+<P>
+
+[% INCLUDE footer.tt %]
+

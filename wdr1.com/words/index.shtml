@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+Howdy Ho
+</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<!--#exec cgi="header.pl"-->
+<P>
+Um, busted.  I have gotten to this yet.
+
+<HR>
+<!--#config timefmt="%a. %b %m, %Y  %I:%M %p %Z"-->
+Last Modified: <!--#echo var="LAST_MODIFIED"--><BR>
+&lt<A HREF="http://www.nhma.com/~wdr1/">William Reardon</A>&gt <A HREF="mailto:wdr1@pobox.com">wdr1@pobox.com</A>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+

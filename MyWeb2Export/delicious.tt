@@ -1,0 +1,11 @@
+<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>MyWeb2 Export</TITLE>
+<H1>MyWeb2 Export</H1>
+<DL><p>
+[% FOREACH bm = bookmarks %]
+<DT><A HREF="[% bm.Url %]" ADD_DATE="[% bm.Date %]" LAST_MODIFIED="[% bm.Date %]" TAGS="[% bm.TagText%]">[% bm.Title %]</A>
+<DD> [% bm.Note %] (tags:  [% bm.TagText %])
+
+[% END %]
+</DL><p>

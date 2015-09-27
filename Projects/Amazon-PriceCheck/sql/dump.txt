@@ -1,0 +1,109 @@
+-- MySQL dump 10.9
+--
+-- Host: localhost    Database: wdr1_amzn
+-- ------------------------------------------------------
+-- Server version	4.1.22-standard
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE `products` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `product_name` varchar(255) NOT NULL default '',
+  `asin` varchar(30) NOT NULL default '',
+  `last_seen_price` decimal(9,2) default NULL,
+  `last_seen_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `category` varchar(255) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `idx_products_asin` (`asin`),
+  KEY `product_name` (`product_name`),
+  KEY `last_seen_date` (`last_seen_date`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `email` varchar(255) NOT NULL default '',
+  `password` varchar(128) NOT NULL default '',
+  `guid` varchar(128) NOT NULL default '',
+  `crt_ts` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `salt` varchar(128) default NULL,
+  `password_recovery` varchar(128) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `idx_users_email` (`email`),
+  KEY `guid` (`guid`),
+  KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'wdr1@pobox.com','','54a4870ad2b3102b8e3b00304894fc92','2008-09-13 02:11:13',NULL,NULL),(2,'wdr2@pobox.com','U5+l3WbRpuryH+0Hj+zRqw','63ee2abc4b8e5a2995724e8486c484bd','2008-09-13 02:30:26','MnV16LGBEzWakK+cyW9Hhw',NULL),(3,'wdr3@pobox.com','tE1skXPlbeKpphQAoq+j4w','a53d9ca46f8fff965ca569a52e9baf48','2008-09-13 02:30:26','jx2qGnTVRAygeW8zOaauUA',NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users_x_products`
+--
+
+DROP TABLE IF EXISTS `users_x_products`;
+CREATE TABLE `users_x_products` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `prod_id` int(10) unsigned NOT NULL default '0',
+  `purchase_price` decimal(9,2) default NULL,
+  `lowest_seen_price` decimal(9,2) default NULL,
+  `end_ts` datetime NOT NULL default '0000-00-00 00:00:00',
+  `crt_ts` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `email_hash` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `email_hash` (`email_hash`),
+  KEY `end_ts` (`end_ts`),
+  KEY `prod_id` (`prod_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users_x_products`
+--
+
+LOCK TABLES `users_x_products` WRITE;
+/*!40000 ALTER TABLE `users_x_products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users_x_products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
