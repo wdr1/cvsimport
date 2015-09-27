@@ -11,7 +11,7 @@ BEGIN { use_ok('Amazon::PriceCheck::EmailPop') };
 ## Our test settings...
 %AMAZON::PRICECHECK::DATA::MAILBOX =
   ( 'username' => 'amazon-test+wdr1.com',
-    'password' => 'amazon-test',
+    'password' => '<password>',
     'host'     => 'mail.wdr1.com',
   );
 
